@@ -9,7 +9,9 @@ Intro to write
 Explain the dataset 
 "Plot number of movies per year"
 "plot Characters metadata"
-{ % include_relative assets/figures/movie_genre_us.html % } 
+
+
+{% include_relative assets/figures/movie_genre_us.html %} 
 
 
 # Movies genre in 9/11 
