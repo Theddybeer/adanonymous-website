@@ -9,11 +9,14 @@ Point initial, pk on choisit ces 2 event
 Plot : evolution du nombre total avec bar vertical a cahque event 
 
 [Go to World War 2](#ww2)
+
 [Go to 9/11](#911)
 
 # WW2 
 
  ## Genre anaylisis WW2
+
+
 Imagine you’re relaxing on your sofa, ready to watch an old movie from the 1940s. Out of curiosity, you type "best movie 1942" into Google — the year of your grandfather's birth. To your surprise, the top three highest-rated films from that year, according to IMDb, are about crime and death.
 
 This sparks your interest: could it be a coincidence, or was there a broader trend in movie genres at that time?
@@ -35,6 +38,7 @@ Looking further back, an earlier peak is noticeable in Asia in 1938 and 1939, wh
 ## Ethniciy anaylisys 
 Plot :  Ethncicity distribution bar avant après : interactif par continent 
 Texte : analyse 
+Plot jews german evolution before / après 
 
 ## Plot analysis 
 To do 
@@ -63,16 +67,20 @@ This suggests that while the impact of 9/11 on political cinema is most evident 
 
 
 ## Ethnicity analysis
+![Crepe](/assets/figures/WW2_etchnicty_distribution.png){: .mx-auto.d-block :}
 Plot : Bar plot distribution ethicnty avant après event et  US vs rest of world
 Analyse discussion rien concluant 
 Plot : changement de ratio 
 Rien de concluant 
 
 
-## Plot analysisis 
-A faire
+## Plot analysis 
+{% include_relative assets/figures/9_11_key_words_occurence_14_18_24.html %} 
 
-Fun fact : shrek
+
+![image](assets/img/shrek.jpg){: style="float: left"}
+Fun fact : about shrek 
+zfgzifhziufhizuhfuzf zufygzuefg uzyfggzfgzfgizf
 
 
 # Conclusion
