@@ -36,7 +36,7 @@ Looking further back, an earlier peak is noticeable in Asia in 1938 and 1939, wh
 
 
 ## Ethniciy anaylisys 
-Plot :  Ethncicity distribution bar avant après : interactif par continent 
+![ethnicity_WW2](/assets/figures/WW2_etchnicty_distribution.png){: .mx-auto.d-block :}
 Texte : analyse 
 Plot jews german evolution before / après 
 
@@ -67,7 +67,7 @@ This suggests that while the impact of 9/11 on political cinema is most evident 
 
 
 ## Ethnicity analysis
-![Crepe](/assets/figures/WW2_etchnicty_distribution.png){: .mx-auto.d-block :}
+![ethnicity_911](/assets/figures/9-11_etchnicty_distribution.png){: .mx-auto.d-block :}
 Plot : Bar plot distribution ethicnty avant après event et  US vs rest of world
 Analyse discussion rien concluant 
 Plot : changement de ratio 
@@ -77,7 +77,7 @@ Rien de concluant
 ## Plot analysis 
 {% include_relative assets/figures/9_11_key_words_occurence_14_18_24.html %} 
 
-
+<img src="assets/img/shrek.jpg" alt="drawing" width="200"/>
 ![image](assets/img/shrek.jpg){: style="float: left"}
 Fun fact : about shrek 
 zfgzifhziufhizuhfuzf zufygzuefg uzyfggzfgzfgizf
