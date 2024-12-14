@@ -4,9 +4,28 @@ title: World changing event
 subtitle: Did you see the impact from your sofa 
 ---
 # Introduction
-Point initial, pk on choisit ces 2 event
+
+
+Movies... who hasn't watched a movie? They have been around for so long that even our great-grandparents have been to the cinema.
+
+Movies have lived through the last century, from the silent era at the beginning of the 20th century, through the golden age of Hollywood until the 1940s. Then, adapting to the rise of television with widescreen formats and epic productions before shifting to more gritty and realistic movies in the 1960s. We have now welcomed the digital era filled with special effects-driven blockbusters and streaming services.
+
+When you think that it took 10 centuries during the Middle Ages to discover a new continent but only two centuries to live through three technological revolutions and two world wars, the movie industry could not have a shortage of inspiration. But in reality, how much did real-world events shape and impact the movie industry? Does a terrorist attack in the most powerful country and home of Hollywood have enough impact to change the movie industry? Or does it necessitate a world war with 70 nations to impact it?
+
+This is the question we want to answer with you, with the power of data analysis. We used the CMU data corpus.
+
+ blablablbal <span style="color:blue">TO do </span>.
+Explanation of the CMU data corpus. 
+
+Why 9/11
+
+Why WW2
 
 Plot : evolution du nombre total avec bar vertical a cahque event 
+
+
+
+
 
 [Go to World War 2](#ww2)
 
