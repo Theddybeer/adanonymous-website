@@ -1,17 +1,17 @@
 ---
 layout: home
-title: Adanonymous story
-subtitle: AAAAH what AM I DOING
+title: World changing event
+subtitle: Did you see the impact from your sofa 
 ---
 # Introduction
 Point initial, pk on choisit ces 2 event
 
 Plot : evolution du nombre total avec bar vertical a cahque event 
 
+[Go to World War 2](#ww2)
+[Go to 9/11](#911)
 
-
-
-
+# WW2 
 
  ## Genre anaylisis WW2
 Imagine you’re relaxing on your sofa, ready to watch an old movie from the 1940s. Out of curiosity, you type "best movie 1942" into Google — the year of your grandfather's birth. To your surprise, the top three highest-rated films from that year, according to IMDb, are about crime and death.
@@ -44,7 +44,8 @@ To do
 
 ## Genre anaylisis : US vs rest of the world
 
-Plot  : graph plot of genre evolution by US vs NON us 
+{% include_relative assets/figures/movie_genre_us_10_23_34.html %} 
+
 If we focus on some genre trends around 2001, shifts can be observed in genres such as social issues, political cinema, law and crime, and culture and society.
 
 Among these, political cinema seems to have an important change . To better understand this shift, we apply a linear regression to analyze the overall trend before and after 2001. Furthermore, we separate the analysis into U.S. and non-U.S. movies to determine whether the change is a global phenomenon or specific to the U.S.
