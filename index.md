@@ -113,7 +113,7 @@ Let's go back to the sofa and choose another movie â€” one that won the Palme dâ
 
 ## Genre anaylisis : US vs rest of the world
 
-{% include_relative assets/figures/movie_genre_us_10_23_34.html %} 
+{% include_relative assets/figures/9_11/Movies/movie_genre_us_10_23_34.html %} 
 
 If we focus on some genre trends around 2001, shifts can be observed in genres such as social issues, political cinema, law and crime, and culture and society.
 
