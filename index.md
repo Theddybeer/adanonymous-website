@@ -81,7 +81,7 @@ You are happy to find more general words. You see that the words "phone" appears
 
 Okay, good. You try now to fit a scatter plot comparing the expected number of words before and after WW2 with a linear regression. It looks like this :
 
-{% include_relative assets/figures/WW2/Plot/WW2_plot_regression.html %} 
+
 
 The slope of the linear regression is ~1.37, suggesting that the expected number of a word tends to grow. This naively suggests that plot summaries got longer with time and should be ~1.37 longer in expectation, which makes sense but does not help us really here. We can however use this regression line to find interesting key words; you try to find the words that are the furthest from the regression line. This would allow for a more fair analysis for the biggest/smallest ratios, as it "normalizes" the fact that plot summaries got longer with time. You plot the ten furthest words :
 
