@@ -81,9 +81,8 @@ You are happy to find more general words. You see that the words "phone" appears
 
 Okay, good. You try now to fit a scatter plot comparing the expected number of words before and after WW2 with a linear regression. It looks like this :
 
-{% raw %}
-{% include_relative assets/figures/WW2/Plot/WW2_plot_regression_2.html %} 
-{% endraw %}
+<span style="color:green">Cheat : added picture </span>.
+![WW2_plot_regression](/assets/figures/WW2/Plot/WW2_plot_regression_2.png){: .mx-auto.d-block :}
 
 The slope of the linear regression is ~1.37, suggesting that the expected number of a word tends to grow. This naively suggests that plot summaries got longer with time and should be ~1.37 longer in expectation, which makes sense but does not help us really here. We can however use this regression line to find interesting key words; you try to find the words that are the furthest from the regression line. This would allow for a more fair analysis for the biggest/smallest ratios, as it "normalizes" the fact that plot summaries got longer with time. You plot the ten furthest words :
 
@@ -106,7 +105,15 @@ We see again that the word "Nazi" was very present during the war, surely in pro
 
 We have seen that the word "kill" comes back often in our analysis, telling us that the violence of the war and death surely changed/shocked all human beings and that it reflects in the movie industry. 
 
+## NLP
 
+<span style="color:green">Cheat : added picture </span>.
+
+![NLP_before_after](/assets/figures/WW2/NLP/NLP_before_after.png){: .mx-auto.d-block :}
+
+![NLP_before_during](/assets/figures/WW2/NLP/NLP_before_during.png){: .mx-auto.d-block :}
+
+![NLP_during_after](/assets/figures/WW2/NLP/NLP_during_after.png){: .mx-auto.d-block :}
 
 
 
@@ -127,14 +134,14 @@ The analysis shows that, for U.S. movies, the percentage of political cinema is 
 
 If this shift is linked to the events of 9/11, we want to know whether the trend is consistent for non-U.S. regions. To do so, we focus on three key regions: Europe, Asia, and North America.
 
-![continent_911](/assets/figures/9_11_movies_political_cinema_continen.png){: .mx-auto.d-block :}
+![continent_911](/assets/figures/9_11/Movies/9_11_movies_political_cinema_continent.png){: .mx-auto.d-block :}
 
 Starting from 2001, there is a noticeable emergence of the political cinema genre in Asia, where it was previously absent. In Europe, we observe a small increase in the genre's presence, less pronounced than the significant rise seen in the U.S.
 This suggests that while the impact of 9/11 on political cinema is most evident in the U.S., its influence can also be seen, to a lesser extent, in other regions, particularly in Asia. Some cofounders might also be under the change in the other continents. 
 
 
 ## Ethnicity analysis
-![ethnicity_911](/assets/figures/9-11_etchnicty_distribution.png){: .mx-auto.d-block :}
+![ethnicity_911](/assets/figures/9_11/Ethnicity/9-11_etchnicty_distribution.png){: .mx-auto.d-block :}
 Plot : Bar plot distribution ethicnty avant après event et  US vs rest of world
 Analyse discussion rien concluant 
 Plot : changement de ratio 
@@ -161,6 +168,9 @@ You obtain more general words, altough some are still too specific, as "kim" or 
 Okay, that was not very concluant. You try now to fit a scatter plot comparing the expected number of words before and after 9/11 with a linear regression.
 
 <span style="color:green">Plot : regression  </span>.
+<span style="color:green">Cheat : added picture </span>.
+
+![9_11_plot_regression](/assets/figures/9_11/Plot/9_11_plot_regression.png){: .mx-auto.d-block :}
 
 The slope of the linear regression is ~1.14, suggesting that the expected number of a word tends to grow slighlty. This naively suggests that plot summaries got longer with time and should be ~1.14 longer in expectation, which makes sense but does not help us really here. We can however use this regression line to find interesting key words; you try to find the words that are the furthest from the regression line. This would allow for a more fair analysis for the biggest/smallest ratios, as it "normalizes" the fact that plot summaries got longer with time.
 
