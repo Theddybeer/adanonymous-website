@@ -158,7 +158,7 @@ You obtain more general words, altough some are still too specific, as "kim" or 
 
 Okay, that was not very concluant. You try now to fit a scatter plot comparing the expected number of words before and after 9/11 with a linear regression.
 
-{% include_relative assets/figures/9_11/Plot/9_11_plot_regression.html %} 
+<span style="color:green">Plot : regression  </span>.
 
 The slope of the linear regression is ~1.14, suggesting that the expected number of a word tends to grow slighlty. This naively suggests that plot summaries got longer with time and should be ~1.14 longer in expectation, which makes sense but does not help us really here. We can however use this regression line to find interesting key words; you try to find the words that are the furthest from the regression line. This would allow for a more fair analysis for the biggest/smallest ratios, as it "normalizes" the fact that plot summaries got longer with time.
 
