@@ -35,8 +35,8 @@ If you're ready, sit back on your couch and let's go on a journey through histor
 
 [Go to 9/11](#911)
 
-[Go WW2]({% link WW2.md %})
-[Go 9/11]({% link 9_11.md %})
+[Go WW2]({{ site.baseurl }}{% link WW2.md %})
+[Go 9/11]({{ site.baseurl }}{% link 9_11.md %})
 
 
 
