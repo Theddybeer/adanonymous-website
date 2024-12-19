@@ -47,13 +47,15 @@ If you're ready, sit back on your couch and let's go on a journey through histor
 .redirect-button {
     margin: 0 10px;
     padding: 10px 20px;
-    background-color: #0044FF;
+    background-color: #FFBB00;
+    color : rgb(48, 48, 48);
     color: white;
     border: none;
     cursor: pointer;
   }
   .redirect-button:hover {
-    background-color: #ffbb00;
+    background-color:rgb(48, 48, 48);
+    Color: #FFBB00;
   }
   .redirect-buttons {
     display: flex;

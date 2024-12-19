@@ -176,13 +176,15 @@ What is the impact on German character ? In Europe, we observe a big rise in Ger
 .redirect-button {
     margin: 0 10px;
     padding: 10px 20px;
-    background-color: #0044FF;
+    background-color: #FFBB00;
+    color : rgb(48, 48, 48);
     color: white;
     border: none;
     cursor: pointer;
   }
   .redirect-button:hover {
-    background-color: #ffbb00;
+    background-color:rgb(48, 48, 48);
+    Color: #FFBB00;
   }
   .redirect-buttons {
     display: flex;
