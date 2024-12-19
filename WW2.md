@@ -53,9 +53,9 @@ By splitting Europe into two categories: Germany and the rest of Europe, you dis
 
 
 <div class="menu">
-  <button class="menu-item" onclick="showContent('content1')">Item 1</button>
-  <button class="menu-item" onclick="showContent('content2')">Item 2</button>
-  <button class="menu-item" onclick="showContent('content3')">Item 3</button>
+  <button class="menu-item" onclick="showContent('content1')">Before After</button>
+  <button class="menu-item" onclick="showContent('content2')">Before During</button>
+  <button class="menu-item" onclick="showContent('content3')">During After</button>
 </div>
 
 <div id="content-section">
@@ -85,6 +85,28 @@ By splitting Europe into two categories: Germany and the rest of Europe, you dis
     document.getElementById(contentId).style.display = 'block';
   }
 </script>
+
+<style>
+  .menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .menu-item {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color:rgb(136, 136, 136);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .menu-item:hover {
+    background-color:rgb(255, 187, 0);
+  }
+  .content {
+    text-align: center;
+  }
+</style>
 
 
 # Movie plot summaries analysis
