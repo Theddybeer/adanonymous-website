@@ -1,0 +1,92 @@
+---
+layout: page
+title: World War 2 
+subtitle: How did it impact the movie industry ?
+---
+
+
+
+# Genre anaylisis 
+
+
+Imagine you’re relaxing on your sofa, ready to watch an old movie from the 1940s. Out of curiosity, you type "best movie 1942" into Google — the year of your grandfather's birth. To your surprise, the top three highest-rated films from that year, according to IMDb, are about crime and death.
+
+This sparks your interest: could it be a coincidence, or was there a broader trend in movie genres at that time?
+
+
+{% include_relative assets/figures/WW2/Movies/movie_genre_us_ww2_12_00_01.html %} 
+
+To investigate, you look at the percentage of film genres with significant variation in a five-year range before and after 1942. The results reveal that genres like war films, propaganda films, and combat films increased in their occurence in the cinema. The data even highlights a peak, reflecting a rise in these types of films around this period.
+
+Considering that World War II took place from 1939 to 1945, it becomes linked that the war influenced cinematic themes. The shift in genres appears to have started around 1940 and continued until around 1948.
+You want to understand this trend a bit more, so you decide to focus on the "war film" genre across each of the main included continents: North America, Europe, and Asia.
+
+{% include_relative assets/figures/WW2/Movies/War_film.html %} 
+
+In 1943, war films represented more than 11% of films in Europe — a percentage that had doubled compared to 1941. A similar doubling occurred in the United States, while Asia experienced a significant increase as well. By 1946, the percentage of war films in all three continents had nearly returned to its original level.
+Looking further back, an earlier peak is noticeable in Asia in 1938 and 1939, which is not observed in Europe or the United States. Intrigued by this anomaly, you consult a history book and discover a possible explanation: the Second Sino-Japanese War, which began in 1937 and ended in 1945. The start of this conflict may have induced the initial surge in war films in Asia.
+
+
+# NLP
+
+<span style="color:green">Cheat : added picture </span>.
+
+![NLP_before_after](/assets/figures/WW2/NLP/NLP_before_after.png){: .mx-auto.d-block :}
+
+![NLP_before_during](/assets/figures/WW2/NLP/NLP_before_during.png){: .mx-auto.d-block :}
+
+![NLP_during_after](/assets/figures/WW2/NLP/NLP_during_after.png){: .mx-auto.d-block :}
+
+
+# Ethniciy anaylisys 
+![ethnicity_WW2](/assets/figures/WW2/Ethnicity/WW2_etchnicty_distribution.png){: .mx-auto.d-block :}
+Texte : analyse 
+Plot jews german evolution before / après 
+
+
+# Plot analysis 
+
+You wish to look at the plot summaries of movies. You think to yourself : "Surely having a world war has changed not only the types of movies produced but the content of the movies itself too..." You then try to compute some statistics over the plot summaries. 
+
+You first try to look at the expected number of words before and after the second world war.
+You filter out words that have an expected number of appearences less than 0.001, as they appear way too rarely. After some tedious computing, you obtain the first thirty biggest ratios :
+
+{% include_relative assets/figures/WW2/Plot/WW2_plot_ratio_1e-3.html %} 
+
+What does that mean ? We see that the word "tank" appeared ~11 times more afterwards, "japanese" ~10 times more and "terrorist" ~8 times more. You are a bit confused by some words that are too specific, such as "alex" or "sandy". You decide to filter more aggressively and take out words that have an expected number of appearences less than 0.01 now. Again you do some computing and you obtain this :
+
+{% include_relative assets/figures/WW2/Plot/WW2_plot_ratio_1e-1.html %} 
+
+You are happy to find more general words. You see that the words "phone" appears ~4 times more and camera appears ~3 times more. You approve these results as technology is more obviously more present after the begginning of WW2 than before. You notice that among the plot with more general words, the words "mission", "u.s.", and "killing" appear ~3 times more.  You can not say that WW2 is the cause of the more frequent usage of these words but we keep them in mind for later, when we will analyse the plot summaries in a more specific time period.
+
+Okay, good. You try now to fit a scatter plot comparing the expected number of words before and after WW2 with a linear regression. It looks like this :
+
+<span style="color:green">Cheat : added picture </span>.
+![WW2_plot_regression](/assets/figures/WW2/Plot/WW2_plot_regression_2.png){: .mx-auto.d-block :}
+
+The slope of the linear regression is ~1.37, suggesting that the expected number of a word tends to grow. This naively suggests that plot summaries got longer with time and should be ~1.37 longer in expectation, which makes sense but does not help us really here. We can however use this regression line to find interesting key words; you try to find the words that are the furthest from the regression line. This would allow for a more fair analysis for the biggest/smallest ratios, as it "normalizes" the fact that plot summaries got longer with time. You plot the ten furthest words :
+
+{% include_relative assets/figures/WW2/Plot/WW2_plot_furthest_regression.html %} 
+
+ You then think that the theme of killing got more popular after WW2 as you see the word "kill" is present again.
+
+Instead of looking over statistics of all words, you try to focus on movies with certain key words. As key words, "Nazi", "Hitler", "Axis", "Allied" and "Jew" come first in your mind. You try to look at the number of movies that contain these key words. 
+
+{% include_relative assets/figures/WW2/Plot/WW2_key_words_occurence.html %} 
+
+
+It makes sense that the word nazi is used a lot between 1940-1950, but you notice that it then stays constant, oscillating between 3 and 10 movies per year after 1950. The key words "Hitler", "Axis" and "Allied" present the same pattern, altough smaller in magnitudes. The key word "Jew" is more interesting. We can see growth until the beginning of WW2, where it shrinks a bit and stays constant until 1960, where it grows again. We could understand that after the atrocities comitted towards the jewish people, the movie industry may have been more prudent.
+
+You find it interesting but it would make more sense to focus on time periods. You do that in two ways. First, you plot the years before and after the beginning of the war. Second, the years during the war, some years beforhand and some years afterwards. You remember the words "mission", "u.s.", "killing" and "kill" and you quickly add them in the key words. You plot the percentages of movies that contain the key words with respect to these time periods :
+
+{% include_relative assets/figures/WW2/Plot/WW2_plot_percentage_before_during_after.html %} 
+
+We see again that the word "Nazi" was very present during the war, surely in propaganda movies. The words "Hitler", "Axis" and "Allied" have the same pattern, as we have seen beforehand already. We see again that thw word "Jew" gets less frequent. You look at the newly added key words. The word "Mission" present the same pattern as we have discussed. The words "u.s." and "killing" just grow with time. "kill" is an interesting key word. It is a lot used during the war compared to beforehand and stays the same afterwards.
+
+We have seen that the word "kill" comes back often in our analysis, telling us that the violence of the war and death surely changed/shocked all human beings and that it reflects in the movie industry. 
+
+
+
+
+
+Let's go back to the sofa and choose another movie — one that won the Palme d’Or at the Cannes Film Festival. While searching, you come across Fahrenheit 9/11, a film about the invasion of Iraq after 9/11. It might be interesting, right? But is it only this movie and other war-related films that were influenced by 9/11 event?

@@ -10,7 +10,7 @@
 ############################
 
 # Name of website
-title: Adanonymous
+title: Did you see the impact from your sofa
 
 # Your name to show in the footer
 Author: Adanonymous
@@ -20,6 +20,8 @@ Author: Adanonymous
 
 navbar-links:
   The Team: "TheTeam"
+  9/11: "911"
+  WW2: "WW2"
   #Resources:
   #  - Beautiful Jekyll: "https://beautifuljekyll.com"
   #  - Learn markdown: "https://www.markdowntutorial.com/"
@@ -34,7 +36,7 @@ navbar-links:
 avatar: "/assets/img/movie.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
-round-avatar: true
+round-avatar: false
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
@@ -117,7 +119,7 @@ feed_show_tags: true
 post_search: true
 
 # Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
-edit_page_button: true
+edit_page_button: 
 
 # Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
 # If this setting is off, then long sub-menu words might get cut off
