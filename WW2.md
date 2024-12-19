@@ -62,19 +62,20 @@ By splitting Europe into two categories: Germany and the rest of Europe, you dis
   <div id="content1" class="content">
     <h2>Item 1</h2>
     <p>This is the content for Item 1.</p>
-    <img src="/assets/figures/WW2/NLP/NLP_before_after.png" alt="Image 1">
+    <img src="{{ '/assets/figures/WW2/NLP/NLP_before_after.png' | relative_url }}" alt="Image 1">
   </div>
   <div id="content2" class="content" style="display:none;">
     <h2>Item 2</h2>
     <p>This is the content for Item 2.</p>
-    <img src="/assets/figures/WW2/NLP/NLP_before_during.png" alt="Image 2">
+    <img src="{{ '/assets/figures/WW2/NLP/NLP_before_during.png' | relative_url }}" alt="Image 2">
   </div>
   <div id="content3" class="content" style="display:none;">
     <h2>Item 3</h2>
     <p>This is the content for Item 3.</p>
-    <img src="/assets/figures/WW2/NLP/NLP_during_after.png" alt="Image 3">
+    <img src="{{ '/assets/figures/WW2/NLP/NLP_during_after.png'| relative_url }}" alt="Image 3">
   </div>
 </div>
+
 
 <script>
   function showContent(contentId) {
