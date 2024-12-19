@@ -31,9 +31,7 @@ Why WW2
 
 <span style="color:blue">TO do : format this in a nicer way </span>.
 If you're ready, sit back on your couch and let's go on a journey through history together.
-[Go to World War 2](#ww2)
 
-[Go to 9/11](#911)
 
 [Go WW2]({{ site.baseurl }}{% link WW2.md %})
 [Go 9/11]({{ site.baseurl }}{% link 9_11.md %})

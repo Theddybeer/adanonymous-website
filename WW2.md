@@ -4,12 +4,16 @@ title: World War 2
 subtitle: How did it impact the movie industry ?
 ---
 
+- [Genre Analysis](#genre-analysis)
+- [Natural language processing](#natural-language-processing)
+- [Movie plot summaries analysis](#movie-plot-summaries-analysis)
+- [Ethniciy analysis](#ethniciy-analysis)
+- [Conclusion](#conclusion)
+
+# Genre Analysis 
 
 
-# Genre anaylisis 
-
-
-Imagine you’re relaxing on your sofa, ready to watch an old movie from the 1940s. Out of curiosity, you type "best movie 1942" into Google — the year of your grandfather's birth. To your surprise, the top three highest-rated films from that year, according to IMDb, are about crime and death.
+Imagine you’re relaxing on your sofa, ready to watch an old movie from the 1940s. Out of curiosity, you type "best movie 1942" into Google — the year of your grandfather's birth. To your surprise, the top three highest-rated films from that year, according to [IMDb](https://www.imdb.com/list/ls023869890/?year=1942%2C1942&sort=user_rating%2Cdesc ), are about crime and death.
 
 This sparks your interest: could it be a coincidence, or was there a broader trend in movie genres at that time?
 
@@ -26,8 +30,18 @@ You want to understand this trend a bit more, so you decide to focus on the "war
 In 1943, war films represented more than 11% of films in Europe — a percentage that had doubled compared to 1941. A similar doubling occurred in the United States, while Asia experienced a significant increase as well. By 1946, the percentage of war films in all three continents had nearly returned to its original level.
 Looking further back, an earlier peak is noticeable in Asia in 1938 and 1939, which is not observed in Europe or the United States. Intrigued by this anomaly, you consult a history book and discover a possible explanation: the Second Sino-Japanese War, which began in 1937 and ended in 1945. The start of this conflict may have induced the initial surge in war films in Asia.
 
+You return to your sofa to start watching the movie “Casablanca”, which has an IMDb rating of 8.5 and is about the war. As you watch, you notice that the film serves as propaganda against the Nazis.
+It's time for a movie break with some fun data analysis. This time, you focus on the propaganda movie genre. 
 
-# NLP
+![All continent](/assets/figures/WW2/Movies/Propaganda%20by%20continent.jpg){: .mx-auto.d-block :}
+
+You observe an increase in the production of propaganda films across all three continents you studied, starting from 1942. However, Europe shows a notable peak in 1940, right at the beginning of the war.
+By splitting Europe into two categories: Germany and the rest of Europe, you discover that the peak is primarily driven by German films. What a surprise !
+
+![zoom_germany](/assets/figures/WW2/Movies/zoom_germany.jpg){: .mx-auto.d-block :}
+
+
+# Natural language processing
 
 <span style="color:green">Cheat : added picture </span>.
 
@@ -38,13 +52,42 @@ Looking further back, an earlier peak is noticeable in Asia in 1938 and 1939, wh
 ![NLP_during_after](/assets/figures/WW2/NLP/NLP_during_after.png){: .mx-auto.d-block :}
 
 
-# Ethniciy anaylisys 
-![ethnicity_WW2](/assets/figures/WW2/Ethnicity/WW2_etchnicty_distribution.png){: .mx-auto.d-block :}
-Texte : analyse 
-Plot jews german evolution before / après 
+<div class="menu">
+  <button class="menu-item" onclick="showContent('content1')">Item 1</button>
+  <button class="menu-item" onclick="showContent('content2')">Item 2</button>
+  <button class="menu-item" onclick="showContent('content3')">Item 3</button>
+</div>
+
+<div id="content-section">
+  <div id="content1" class="content">
+    <h2>Item 1</h2>
+    <p>This is the content for Item 1.</p>
+    <img src="/assets/figures/WW2/NLP/NLP_before_after.png" alt="Image 1">
+  </div>
+  <div id="content2" class="content" style="display:none;">
+    <h2>Item 2</h2>
+    <p>This is the content for Item 2.</p>
+    <img src="/assets/figures/WW2/NLP/NLP_before_during.png" alt="Image 2">
+  </div>
+  <div id="content3" class="content" style="display:none;">
+    <h2>Item 3</h2>
+    <p>This is the content for Item 3.</p>
+    <img src="/assets/figures/WW2/NLP/NLP_during_after.png" alt="Image 3">
+  </div>
+</div>
+
+<script>
+  function showContent(contentId) {
+    const contents = document.querySelectorAll('.content');
+    contents.forEach(content => {
+      content.style.display = 'none';
+    });
+    document.getElementById(contentId).style.display = 'block';
+  }
+</script>
 
 
-# Plot analysis 
+# Movie plot summaries analysis
 
 You wish to look at the plot summaries of movies. You think to yourself : "Surely having a world war has changed not only the types of movies produced but the content of the movies itself too..." You then try to compute some statistics over the plot summaries. 
 
@@ -62,6 +105,7 @@ You are happy to find more general words. You see that the words "phone" appears
 Okay, good. You try now to fit a scatter plot comparing the expected number of words before and after WW2 with a linear regression. It looks like this :
 
 <span style="color:green">Cheat : added picture </span>.
+
 ![WW2_plot_regression](/assets/figures/WW2/Plot/WW2_plot_regression_2.png){: .mx-auto.d-block :}
 
 The slope of the linear regression is ~1.37, suggesting that the expected number of a word tends to grow. This naively suggests that plot summaries got longer with time and should be ~1.37 longer in expectation, which makes sense but does not help us really here. We can however use this regression line to find interesting key words; you try to find the words that are the furthest from the regression line. This would allow for a more fair analysis for the biggest/smallest ratios, as it "normalizes" the fact that plot summaries got longer with time. You plot the ten furthest words :
@@ -87,6 +131,9 @@ We have seen that the word "kill" comes back often in our analysis, telling us t
 
 
 
+# Ethniciy analysis 
+![ethnicity_WW2](/assets/figures/WW2/Ethnicity/WW2_etchnicty_distribution.png){: .mx-auto.d-block :}
+Texte : analyse 
+Plot jews german evolution before / après 
 
-
-Let's go back to the sofa and choose another movie — one that won the Palme d’Or at the Cannes Film Festival. While searching, you come across Fahrenheit 9/11, a film about the invasion of Iraq after 9/11. It might be interesting, right? But is it only this movie and other war-related films that were influenced by 9/11 event?
+# Conclusion
