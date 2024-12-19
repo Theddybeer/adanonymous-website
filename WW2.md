@@ -43,13 +43,6 @@ By splitting Europe into two categories: Germany and the rest of Europe, you dis
 
 # Natural language processing
 
-<span style="color:green">Cheat : added picture </span>.
-
-![NLP_before_after](/assets/figures/WW2/NLP/NLP_before_after.png){: .mx-auto.d-block :}
-
-![NLP_before_during](/assets/figures/WW2/NLP/NLP_before_during.png){: .mx-auto.d-block :}
-
-![NLP_during_after](/assets/figures/WW2/NLP/NLP_during_after.png){: .mx-auto.d-block :}
 
 
 <div class="menu">
@@ -155,8 +148,45 @@ We have seen that the word "kill" comes back often in our analysis, telling us t
 
 
 # Ethniciy analysis 
+
+Did you know where the main character of your favorite movie comes from? What  about its ethnicities? 
+You are in your sofa still looking for movies from 1942. You noted the distribution of the ethnicity of the main character is very different than the one from 2010. Hence, when do you think the shift was experienced? Could the actor ethnicity be influenced by capital world event like World War II? To investigate we focus on 1937 -1948 years, to avoid confounding factors. Furthermore, for statistical relevance reasons the subsequent analysis will be based on North America and Europe.
+
+
 ![ethnicity_WW2](/assets/figures/WW2/Ethnicity/WW2_etchnicty_distribution.png){: .mx-auto.d-block :}
-Texte : analyse 
-Plot jews german evolution before / après 
+
+Within the 10 most represented ethnicities we observe some interesting shift between the two times range, for example increase in Swedes character in Europe or decrease in Irish American in North America. Where can we found the impact of World War 2 ? If we looked at the German character representation we do not observe any difference in the occurence between the two time range. Most likely, because the second time period contain the War during which German was highly represented for example in German propaganda film. Another interesting ethnicities for our analysis is Jewish people. We observe an increase in the proportions of occurences in the second time period both in North America and in Europe. The increase was however stronger in North America, which exhibit a ratio of 0.98 whereas in Europe the ratio was 0.8. To assess this observation we want to further look at the distribution of German character and Jewish people throughout the last century.
+
+
+
+![ethnicity_German_jew](/assets/figures/WW2/Ethnicity/German%20jew%20evolution.png){: .mx-auto.d-block :}
+
+What is the impact on German character ? In Europe, we observe a big rise in German character which drops in 1945. Do you see the link with WW2? The end of the war coincided with a drop in German propaganda film and therefore, a consequent reduction of German representation in movies. What about the representation of Jewish ? In Europe the representation of Jewish seems to be greatly impacted by the war as the significantly decrease starting form late 1930’s towards today. In parallel, 1930’s corresponds to a rise of antisemitism in Europe, and rise of exclusion laws for Jewish in Germany. Therefore, explaining the decrease in Jewish character proportion in movies. On the other hand, the representation of Jewish character in North America does not seem to get impacted between 1940 and 1950. Hence, we know World War 2 had a greater impact on Europe Jewish population compared to American Jewish population. Then the decrease observed in Jewish representation in Europe is most likely caused by WW2
 
 # Conclusion
+
+
+
+<div class="redirect-buttons">
+  <button class="redirect-button" onclick="window.location.href='{{ '../9_11' | relative_url }}'">Go to 9/11 Analysis</button>
+  <button class="redirect-button" onclick="window.location.href='{{ '../' | relative_url }}'">Go to menu</button>
+</div>
+
+<style>
+.redirect-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #0044FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .redirect-button:hover {
+    background-color: #ffbb00;
+  }
+  .redirect-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+</style>

@@ -19,9 +19,9 @@ Author: Adanonymous
 ###############################################
 
 navbar-links:
-  The Team: "TheTeam"
-  9/11: "9_11"
   WW2: "WW2"
+  9/11: "9_11"
+  The Team: "TheTeam"
   #Resources:
   #  - Beautiful Jekyll: "https://beautifuljekyll.com"
   #  - Learn markdown: "https://www.markdowntutorial.com/"

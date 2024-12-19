@@ -38,7 +38,29 @@ If you're ready, sit back on your couch and let's go on a journey through histor
 
 
 
+<div class="redirect-buttons">
+  <button class="redirect-button" onclick="window.location.href='{{ '/WW2' | relative_url }}'">Go to WW2 Analysis</button>
+  <button class="redirect-button" onclick="window.location.href='{{ '/9_11' | relative_url }}'">Go to 9/11 Analysis</button>
+</div>
 
+<style>
+.redirect-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #0044FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .redirect-button:hover {
+    background-color: #ffbb00;
+  }
+  .redirect-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+</style>
 
 
 
