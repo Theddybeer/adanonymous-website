@@ -168,8 +168,8 @@ What is the impact on German character ? In Europe, we observe a big rise in Ger
 
 
 <div class="redirect-buttons">
-  <button class="redirect-button" onclick="window.location.href='{{ '/adanonymous-website/9_11' | relative_url }}'">Go to 9/11 Analysis</button>
-  <button class="redirect-button" onclick="window.location.href='{{ '/adanonymous-website' | relative_url }}'">Go to menu</button>
+  <button class="redirect-button" onclick="window.location.href='{{ '/9_11' | relative_url }}'">Go to 9/11 Analysis</button>
+  <button class="redirect-button" onclick="window.location.href='{{ '/' | relative_url }}'">Go to menu</button>
 </div>
 
 <style>
