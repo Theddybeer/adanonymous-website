@@ -3,6 +3,8 @@ layout: home
 title: World changing events
 subtitle: Did you see the impact from your sofa ?
 ---
+![alt text](/assets/img/sofa_tank.jpg)
+
 # Introduction
 
 
@@ -10,12 +12,13 @@ Movies... who hasn't watched a movie? They have been around for so long that eve
 
 Movies have lived through the last century, from the silent era at the beginning of the 20th century, through the golden age of Hollywood until the 1940s. Then, adapting to the rise of television with widescreen formats and epic productions before shifting to more gritty and realistic movies in the 1960s. We have now welcomed the digital era filled with special effects-driven blockbusters and streaming services.
 
-When you think that it took 10 centuries during the Middle Ages to discover a new continent but only two centuries to live through three technological revolutions and two world wars, the movie industry could not have a shortage of inspiration. But in reality, how much did real-world events shape and impact the movie industry? Does a terrorist attack in the most powerful country and home of Hollywood have enough impact to change the movie industry? Or does it necessitate a world war with 70 nations to impact it?
+When you consider that it took ten centuries during the Middle Age to discover a new continent, and now only two centuries to experience three technological revolutions and two world wars, it seems clear that the pace of history has accelerated dramatically. With such acceleration, you might expect the movie industry to have an endless source of inspiration. But to what extend do real world events actually shape and influence cinema? Could a single terrorist attack in the world’s most powerful country - and home to Hollywood - be enough to alter the course of the movie industry? Or does it take a global conflict involving 70 nations to impact such an industry?
 
 This is the question we want to answer with you, with the power of data analysis. We used the CMU data corpus.
 **The CMU dataset** contains information on over 30000 movies, including their country of production, language, and genre. For some of these movies, plot summaries are also available. Additionally, the dataset provides details about the actors, the roles they played, as well as their gender and ethnicity.
 Our objective is to evaluate the impact of certain historical events on world cinema using three distinct axes: the impact on movie genres, the worlds used in plot summaries, and the ethnicity of the authors.
 Furthermore, we aimed to use general methods to ensure reproducibility, enabling the analysis to be extended to other historical events.
+
 To begin, we focused on **World War II**, a global event that reshaped world history and impacted all countries. We then shifted our attention to a more "local" but still highly significant event — the **September 11 2001 attacks**.
 
 
