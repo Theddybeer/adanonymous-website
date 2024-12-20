@@ -1,6 +1,6 @@
 ---
 layout: page
-title: World War 2 
+title: World War II 
 subtitle: How did it impact the movie industry ?
 ---
 
@@ -48,7 +48,8 @@ Looking further back, an earlier peak is noticeable in Asia in 1938 and 1939, wh
   align-items: center; 
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5px;
-  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
   }
 
   img {
@@ -107,7 +108,7 @@ By analyzing the words associated with these negative characters in the three di
     document.getElementById(contentId).style.display = 'block';
   }
 </script>
-You did not find exactly what you expected, but you are definitely convinced the peaks in certain movie genres are not a coincidence !
+You did not find exactly what you expected, but you are definitely convinced the peaks in certain movie genres were not a coincidence !
 <style>
   .menu {
     display: flex;
@@ -177,21 +178,23 @@ You think to yourself that WWII darkly influenced the content of movie plot summ
 
 # Ethniciy analysis 
 
-Did you know where the main character of your favorite movie comes from? What about their ethnicities? 
-You are in your sofa still looking for movies from 1942. You noted the distribution of the ethnicity of the main character is very different than the one from 2010. Hence, when do you think the shift was experienced? Could the actor ethnicity be influenced by capital world event like World War II? To investigate we focus on 1937 -1948 years, to avoid confounding factors. Furthermore, for statistical relevance reasons the subsequent analysis will be based on North America and Europe.
+You are in your sofa still looking for movies from 1942. You noted the distribution of the ethnicity of the main character is very different than the one from nowdays. You wonder when the shift occured? Could the actor ethnicity have be influenced by major world events like World War II? You decide to investigate, focusing on 1937 -1948 years to avoid confounding factors. From what you learned from previous research, you decide to focus on North America and Europe as these continents are the most impacted by the war.
 
 
 ![ethnicity_WW2](/assets/figures/WW2/Ethnicity/WW2_etchnicty_distribution.png){: .mx-auto.d-block :}
 
-Within the 10 most represented ethnicities we observe some interesting shift between the two times range, for example increase in Swedes character in Europe or decrease in Irish American in North America.
+Within the 10 most represented ethnicities you observe some interesting shifts between the two time periods, for example an increase in Swede's characters in Europe or a decrease in Irish American in North America. But is this linked to World War II ? Mmmmh, not really. You decide to focus on the German and Jewish characters.
 
-Where can we found the impact of World War 2 ? If we looked at the German character representation we do not observe any difference in the occurence between the two time range. Most likely, because the second time period contain the War during which German was highly represented for example in German propaganda film. Another interesting ethnicities for our analysis is Jewish people. We observe an increase in the proportions of occurences in the second time period both in North America and in Europe. The increase was however stronger in North America, which exhibit a ratio of 0.98 whereas in Europe the ratio was 0.8. To assess this observation we want to further look at the distribution of German character and Jewish people throughout the last century.
+For the German character representation, you do not observe any difference in the occurence between the two time periods. Most likely, because the second time period contains the War during which German were highly represented for example in propaganda films. 
+
+Another interesting ethnicity for your analysis is Jewish people. You observe an increase in the proportion of occurences in the second time period both in North America and in Europe. The increase was however stronger in North America, which exhibits a ratio of 0.98 whereas in Europe the ratio was 0.8. To assess this observation you want to further look at the distribution of Jewish people throughout this time period.
 
 
 
 ![ethnicity_German_jew](/assets/figures/WW2/Ethnicity/German_jew_abs_evolution.png){: .mx-auto.d-block :}
 
-What is the impact on German character ? In Europe, we observe a big rise in German character which drops in 1945. Do you see the link with WW2? The end of the war coincided with a drop in German propaganda film and therefore, a consequent reduction of German representation in movies. What about the representation of Jewish ? In Europe the representation of Jewish seems to be greatly impacted by the war as the significantly decrease starting form late 1930’s towards today. In parallel, 1930’s corresponds to a rise of antisemitism in Europe, and rise of exclusion laws for Jewish in Germany. Therefore, explaining the decrease in Jewish character proportion in movies. On the other hand, the representation of Jewish character in North America does not seem to get impacted between 1940 and 1950. Hence, we know World War 2 had a greater impact on Europe Jewish population compared to American Jewish population. Then the decrease observed in Jewish representation in Europe is most likely caused by WW2
+In Europe, the representation of Jewish characters seems to have been impacted by the war, with an increase starting after 1945. In contrast, the 1930s saw a rise in antisemitism in Europe, particularly with the introduction of exclusion laws for Jews in Germany. During this period (from 1930’s to 1945), their representation in films remained limited, only starting to grow after the war when antisemitism began to decrease.
+In North America, however, the representation of Jewish characters began to increase in the 1930s, and this trend remained consistent through the 1960s. This is coherent, with the fact that World War II had a greater impact on the Jewish population in Europe compared to that in North America.
 
 
 
