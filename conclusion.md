@@ -4,8 +4,8 @@ title: Conclusion
 ---
 
 What a journey! Before getting off your sofa, let's have one final recap.
-For a major worldwide event like World War II, the film industry reflected the historical shift through a change in genre dominance, for example with the rise of war films. The content of movies also evolved, with an increase in darker themes in the plot summary, often featuring signs of violence even after the war period. Additionally, there was a notable impact on the representation of Jewish characters in film.
-For a less global (but still significant) event like 9/11, the impact on the film industry was less pronounced but still noticeable. This event led to a shift in genre trends and a change in the usage of the word "plane" in movies.
+For a major worldwide event like World War II, the film industry reflected the historical shift through a change in genre dominance, for example with the rise of war films. The content of movies also evolved, with an increase in darker themes in the plot summary, often featuring signs of violence even after the war period. When focusing on some specific movie genres, you can even go further and get specific information about the event itself, such as involved protagonists, geographical insights, and prevalent topics. Additionally, there was a notable impact on the representation of Jewish characters in films.
+For a less global (but still significant) event like 9/11, the impact on the film industry was less pronounced but noticeable. This event led to a shift in genre trends and a change in Sikh ethnicity representation for example.
 
 Let’s investigate other events using the same methodology. These events can be analyzed further, but you will only get a glimpse of their impact. 
 

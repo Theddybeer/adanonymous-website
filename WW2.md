@@ -51,6 +51,10 @@ Looking further back, an earlier peak is noticeable in Asia in 1938 and 1939, wh
   margin-left: auto;
   margin-right: auto;
   }
+  .text {
+    text-align: justify;
+    text-justify: inter-word;
+  }
 
   img {
     max-width: 100%;
