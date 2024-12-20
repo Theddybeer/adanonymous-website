@@ -46,7 +46,7 @@ Looking further back, an earlier peak is noticeable in Asia in 1938 and 1939, wh
 .container1 {
   display: grid;
   align-items: center; 
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   column-gap: 5px;
   margin-left: auto;
   margin-right: auto;
