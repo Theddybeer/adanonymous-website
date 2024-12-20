@@ -7,7 +7,7 @@ subtitle: No, we are not alcoholics
 
 ![Crepe](/assets/img/team_picture.jpg){: .mx-auto.d-block :}
 
-From left to right : **Ines** (Environemental science), **Louis** (Robotics), **Justine** (Life science), **Mirco** (Data Science), **Theodore** (Robotics)
+From left to right : **Ines** (Environemental science), **Louis** (Robotics), **Justine** (Life science), **Theodore** (Robotics), **Mirco** (Data Science), **Theodore** (Robotics)
 
 
 <h3 style="text-align:center;"> Movies have no secret for us anymore </h3>

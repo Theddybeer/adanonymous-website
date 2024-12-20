@@ -48,7 +48,3 @@ To begin, we focused on **World War II**, a global event that reshaped world his
   }
 </style>
 
-
-
-
-# Conclusion

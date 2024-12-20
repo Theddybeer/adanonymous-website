@@ -8,7 +8,6 @@ subtitle: How did it impact the movie industry ?
 - [Natural language processing](#natural-language-processing)
 - [Movie plot summaries analysis](#movie-plot-summaries-analysis)
 - [Ethniciy analysis](#ethniciy-analysis)
-- [Conclusion](#conclusion)
 
 # Genre Analysis 
 
@@ -33,7 +32,7 @@ Looking further back, an earlier peak is noticeable in Asia in 1938 and 1939, wh
 You return to your sofa to start watching the movie “Casablanca”, which has an IMDb rating of 8.5 and is about the war. As you watch, you notice that the film serves as propaganda against the Nazis.
 It's time for a movie break with some fun data analysis. This time, you focus on the propaganda movie genre. 
 
-![All continent](/assets/figures/WW2/Movies/Propaganda%20by%20continent.jpg){: .mx-auto.d-block :}
+![All continent](/assets/figures/WW2/Movies/Propaganda_by_continent.jpg){: .mx-auto.d-block :}
 
 You observe an increase in the production of propaganda films across all three continents you studied, starting from 1942. However, Europe shows a notable peak in 1940, right at the beginning of the war.
 By splitting Europe into two categories: Germany and the rest of Europe, you discover that the peak is primarily driven by German films. What a surprise !
@@ -43,29 +42,32 @@ By splitting Europe into two categories: Germany and the rest of Europe, you dis
 
 # Natural language processing
 
+Intrigued by earlier findings, a question arises: could the peaks in certain movie genres during World War II be unrelated to the war itself? To explore this, you decide to analyze movie plots from that period, focusing on the genres identified earlier.
 
+You sit again on your sofa, take a deep breath and try to remember your history lessons.. You recall that the years before the war were marked by rising antisemitism in Europe, while the post-war period emphasized the condemnation of the Nazi regime and the celebration of resistance efforts.
+
+To investigate, you conduct a sentiment analysis on the characters, isolating plot summaries featuring negatively perceived characters. You then divide the data into three periods: before the war (1930-1938), during the war (1939-1945), and after the war (1945-1955). The goal is to verify whether negatively perceived characters were more likely to follow some trends - for example being Jewish before the war and Nazis or Germans after. 
+
+By analyzing the words associated with these negative characters in the three different periods, you aim to reveal these trends. You decide to plot the words that exhibit the most significant differences for the periods before and during war, and for the periods during and after war.
 
 <div class="menu">
-  <button class="menu-item" onclick="showContent('content1')">Before After</button>
-  <button class="menu-item" onclick="showContent('content2')">Before During</button>
+  <button class="menu-item" onclick="showContent('content1')">Before During</button>
   <button class="menu-item" onclick="showContent('content3')">During After</button>
 </div>
 
 <div id="content-section">
   <div id="content1" class="content">
-    <h2>Item 1</h2>
-    <p>This is the content for Item 1.</p>
-    <img src="{{ '/assets/figures/WW2/NLP/NLP_before_after.png' | relative_url }}" alt="Image 1">
+    <h2>Before During</h2>
+    <img src="{{ '/assets/figures/WW2/NLP/NLP_before_during.png' | relative_url }}" alt="Image 1">
+    <p>You first have a look at the comparison between the period before the war and during the war. Bingo ! You realize the words that show the largest differences are actually related to war : enemy, soldier, criminal, assassin, battle, spade... Some of them even seem to be specifically related to world war II : train, pilot, Vienna, Italy, Soviet, Stalin, Paris. </p>
+    
   </div>
-  <div id="content2" class="content" style="display:none;">
-    <h2>Item 2</h2>
-    <p>This is the content for Item 2.</p>
-    <img src="{{ '/assets/figures/WW2/NLP/NLP_before_during.png' | relative_url }}" alt="Image 2">
-  </div>
+
   <div id="content3" class="content" style="display:none;">
-    <h2>Item 3</h2>
-    <p>This is the content for Item 3.</p>
+    <h2>During After 3</h2>
     <img src="{{ '/assets/figures/WW2/NLP/NLP_during_after.png'| relative_url }}" alt="Image 3">
+    <p>You then examine the comparison between the period during the war and after the war. Bing again ! You find a lot of words related to world war II, but now there is also the topic of resistance : Hitler, nazi, resistance, guerilla, Reich, France, Vichy, Germans, Führer, Mussolini...</p>
+    
   </div>
 </div>
 
@@ -79,7 +81,7 @@ By splitting Europe into two categories: Germany and the rest of Europe, you dis
     document.getElementById(contentId).style.display = 'block';
   }
 </script>
-
+You did not find exactly what you expected, but you are definitely convinced the peaks in certain movie genres are not a coincidence !
 <style>
   .menu {
     display: flex;
@@ -106,65 +108,66 @@ By splitting Europe into two categories: Germany and the rest of Europe, you dis
 
 # Movie plot summaries analysis
 
-You wish to look at the plot summaries of movies. You think to yourself : "Surely having a world war has changed not only the types of movies produced but the content of the movies itself too..." You then try to compute some statistics over the plot summaries. 
+You now want to look at the plot summaries of movies. You think to yourself, "Surely the impact of a world war must have influenced not only the types of movies produced but also their content..." So, you decide to compute some statistics based on the plot summaries.
 
-You first try to look at the expected number of words before and after the second world war.
-You filter out words that have an expected number of appearences less than 0.001, as they appear way too rarely. After some tedious computing, you obtain the first thirty biggest ratios :
+First, you look at the expected number of words before and after World War II. To ensure the analysis is meaningful, you filter out words that appear too infrequently, removing those with an expected frequency of less than 0.001. After some calculations, you obtain the top thirty words with the largest ratio of occurrences.
 
 {% include_relative assets/figures/WW2/Plot/WW2_plot_ratio_1e-3.html %} 
 
-What does that mean ? We see that the word "tank" appeared ~11 times more afterwards, "japanese" ~10 times more and "terrorist" ~8 times more. You are a bit confused by some words that are too specific, such as "alex" or "sandy". You decide to filter more aggressively and take out words that have an expected number of appearences less than 0.01 now. Again you do some computing and you obtain this :
+What does that tell us ? You observe that certain words have become significantly more frequent after the war. For example, "tank" appears roughly 11 times more often, "japanese" about 10 times more, and "terrorist" roughly 8 times more. Some words, such as "alex" or "sandy," are too specific and we would want more general words. So, you decide to filter more aggressively, removing words with an expected frequency lower than 0.01. 
 
 {% include_relative assets/figures/WW2/Plot/WW2_plot_ratio_1e-1.html %} 
 
-You are happy to find more general words. You see that the words "phone" appears ~4 times more and camera appears ~3 times more. You approve these results as technology is more obviously more present after the begginning of WW2 than before. You notice that among the plot with more general words, the words "mission", "u.s.", and "killing" appear ~3 times more.  You can not say that WW2 is the cause of the more frequent usage of these words but we keep them in mind for later, when we will analyse the plot summaries in a more specific time period.
+Now, you are pleased to see more general terms. For instance, "phone" appears approximately 4 times more frequently, and "camera" about 3 times more often. These results seem reasonable, as technology is used a lot more after WWII. Among the more general terms, you also find words like "mission," "u.s.," and "killing" appearing about 3 times more often. While you cannot definitively attribute these shifts to WWII, you keep these findings in mind for future analysis when you focus on specific time periods.
 
-Okay, good. You try now to fit a scatter plot comparing the expected number of words before and after WW2 with a linear regression. It looks like this :
+Okay, good. Now, you decide to fit a scatter plot comparing the expected number of words before and after WWII with a linear regression.
 
-<span style="color:green">Cheat : added picture </span>.
 
 ![WW2_plot_regression](/assets/figures/WW2/Plot/WW2_plot_regression_2.png){: .mx-auto.d-block :}
 
-The slope of the linear regression is ~1.37, suggesting that the expected number of a word tends to grow. This naively suggests that plot summaries got longer with time and should be ~1.37 longer in expectation, which makes sense but does not help us really here. We can however use this regression line to find interesting key words; you try to find the words that are the furthest from the regression line. This would allow for a more fair analysis for the biggest/smallest ratios, as it "normalizes" the fact that plot summaries got longer with time. You plot the ten furthest words :
+The slope of the linear regression is approximately 1.37, suggesting that the expected frequency of a word tends to increase over time. This is simply because that plot summaries have gotten longer, with an average increase of about 1.37 times, which makes sense but doesn't provide much insight for our current analysis. However, we can use this regression line to identify interesting keywords by focusing on those that deviate the most from the line. This approach helps "normalize" the analysis by accounting for the general trend of longer plot summaries over time. You plot the ten words that deviate most from the regression line.
+
 
 {% include_relative assets/figures/WW2/Plot/WW2_plot_furthest_regression.html %} 
 
- You then think that the theme of killing got more popular after WW2 as you see the word "kill" is present again.
+From this, you observe that the theme of "killing" seems to have gained more prominence after WWII, as the word "kill" appears more frequently.
 
-Instead of looking over statistics of all words, you try to focus on movies with certain key words. As key words, "Nazi", "Hitler", "Axis", "Allied" and "Jew" come first in your mind. You try to look at the number of movies that contain these key words. 
+Next, you shift your focus to movies containing specific keywords. You first think of terms like "Nazi," "Hitler," "Axis," "Allied," and "Jew." You examine the number of movies featuring these keywords over time.
 
 {% include_relative assets/figures/WW2/Plot/WW2_key_words_occurence.html %} 
 
 
-It makes sense that the word nazi is used a lot between 1940-1950, but you notice that it then stays constant, oscillating between 3 and 10 movies per year after 1950. The key words "Hitler", "Axis" and "Allied" present the same pattern, altough smaller in magnitudes. The key word "Jew" is more interesting. We can see growth until the beginning of WW2, where it shrinks a bit and stays constant until 1960, where it grows again. We could understand that after the atrocities comitted towards the jewish people, the movie industry may have been more prudent.
+It’s not surprising that the word "Nazi" peaks in the middle of WWII, but you notice that its frequency goes down already in 1944. We can not see it in the plot but you find that after 1950, between 3 and 10 movies per year contain the key word "Nazi", making it a theme. Similarly, the keywords "Hitler," "Axis," and "Allied" show a similar pattern, although with smaller magnitudes. The keyword "Jew" is more intriguing. We see growth leading up to WWII, then a slight decline during the war. You look at the time afterwards and you see a resurgence after 1960. This suggests that, in response to the atrocities committed against Jewish people, the film industry may have initially been cautious but gradually returned to addressing the topic in the post-war years.
 
-You find it interesting but it would make more sense to focus on time periods. You do that in two ways. First, you plot the years before and after the beginning of the war. Second, the years during the war, some years beforhand and some years afterwards. You remember the words "mission", "u.s.", "killing" and "kill" and you quickly add them in the key words. You plot the percentages of movies that contain the key words with respect to these time periods :
+You find this pattern interesting but decide it would be more insightful to focus on specific time periods. You examine the years during the war along with the years just before and after. You recall the words "mission," "u.s.," "killing," and "kill" and add them to your keyword list. You then plot the percentages of movies containing these keywords within the defined time periods.
 
 {% include_relative assets/figures/WW2/Plot/WW2_plot_percentage_before_during_after.html %} 
 
-We see again that the word "Nazi" was very present during the war, surely in propaganda movies. The words "Hitler", "Axis" and "Allied" have the same pattern, as we have seen beforehand already. We see again that thw word "Jew" gets less frequent. You look at the newly added key words. The word "Mission" present the same pattern as we have discussed. The words "u.s." and "killing" just grow with time. "kill" is an interesting key word. It is a lot used during the war compared to beforehand and stays the same afterwards.
+Once again, we see that the word "Nazi" was heavily used during the war, likely in propaganda films. The terms "Hitler," "Axis," and "Allied" follow the same pattern as before. The word "Jew" shows a noticeable decline during the war. Turning to the newly added keywords, "Mission" follows the same pattern as previously observed, while "U.S." and "Killing" steadily increase over time. "Kill" is particularly interesting: it appears significantly more during the war compared to before and remains steady afterward.
 
-We have seen that the word "kill" comes back often in our analysis, telling us that the violence of the war and death surely changed/shocked all human beings and that it reflects in the movie industry. 
+You think to yourself that WWII darkly influenced the content of movie plot summaries. It becomes clear that certain terms, such as "tank," "japanese," or "terrorist," became much more common post-WWII, reflecting the impact of the war on film themes. Additionally, terms related to violence, such as "killing" and "kill," grew in prominence during and after the war, suggesting a shift in the narrative focus of films. These results provide insights into how WWII shaped cinematic storytelling, with evolving themes related to technology, violence, and historical reflection.
 
 
 
 # Ethniciy analysis 
 
-Did you know where the main character of your favorite movie comes from? What  about its ethnicities? 
+Did you know where the main character of your favorite movie comes from? What about their ethnicities? 
 You are in your sofa still looking for movies from 1942. You noted the distribution of the ethnicity of the main character is very different than the one from 2010. Hence, when do you think the shift was experienced? Could the actor ethnicity be influenced by capital world event like World War II? To investigate we focus on 1937 -1948 years, to avoid confounding factors. Furthermore, for statistical relevance reasons the subsequent analysis will be based on North America and Europe.
 
 
 ![ethnicity_WW2](/assets/figures/WW2/Ethnicity/WW2_etchnicty_distribution.png){: .mx-auto.d-block :}
 
-Within the 10 most represented ethnicities we observe some interesting shift between the two times range, for example increase in Swedes character in Europe or decrease in Irish American in North America. Where can we found the impact of World War 2 ? If we looked at the German character representation we do not observe any difference in the occurence between the two time range. Most likely, because the second time period contain the War during which German was highly represented for example in German propaganda film. Another interesting ethnicities for our analysis is Jewish people. We observe an increase in the proportions of occurences in the second time period both in North America and in Europe. The increase was however stronger in North America, which exhibit a ratio of 0.98 whereas in Europe the ratio was 0.8. To assess this observation we want to further look at the distribution of German character and Jewish people throughout the last century.
+Within the 10 most represented ethnicities we observe some interesting shift between the two times range, for example increase in Swedes character in Europe or decrease in Irish American in North America.
+
+Where can we found the impact of World War 2 ? If we looked at the German character representation we do not observe any difference in the occurence between the two time range. Most likely, because the second time period contain the War during which German was highly represented for example in German propaganda film. Another interesting ethnicities for our analysis is Jewish people. We observe an increase in the proportions of occurences in the second time period both in North America and in Europe. The increase was however stronger in North America, which exhibit a ratio of 0.98 whereas in Europe the ratio was 0.8. To assess this observation we want to further look at the distribution of German character and Jewish people throughout the last century.
 
 
 
-![ethnicity_German_jew](/assets/figures/WW2/Ethnicity/German_jew_evolution.png){: .mx-auto.d-block :}
+![ethnicity_German_jew](/assets/figures/WW2/Ethnicity/German_jew_abs_evolution.png){: .mx-auto.d-block :}
 
 What is the impact on German character ? In Europe, we observe a big rise in German character which drops in 1945. Do you see the link with WW2? The end of the war coincided with a drop in German propaganda film and therefore, a consequent reduction of German representation in movies. What about the representation of Jewish ? In Europe the representation of Jewish seems to be greatly impacted by the war as the significantly decrease starting form late 1930’s towards today. In parallel, 1930’s corresponds to a rise of antisemitism in Europe, and rise of exclusion laws for Jewish in Germany. Therefore, explaining the decrease in Jewish character proportion in movies. On the other hand, the representation of Jewish character in North America does not seem to get impacted between 1940 and 1950. Hence, we know World War 2 had a greater impact on Europe Jewish population compared to American Jewish population. Then the decrease observed in Jewish representation in Europe is most likely caused by WW2
 
-# Conclusion
+
 
 
 
