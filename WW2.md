@@ -93,6 +93,7 @@ By splitting Europe into two categories: Germany and the rest of Europe, you dis
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
   }
   .menu-item:hover {
     background-color:rgb(255, 187, 0);
@@ -159,7 +160,7 @@ Within the 10 most represented ethnicities we observe some interesting shift bet
 
 
 
-![ethnicity_German_jew](/assets/figures/WW2/Ethnicity/German%20jew%20evolution.png){: .mx-auto.d-block :}
+![ethnicity_German_jew](/assets/figures/WW2/Ethnicity/German_jew_evolution.png){: .mx-auto.d-block :}
 
 What is the impact on German character ? In Europe, we observe a big rise in German character which drops in 1945. Do you see the link with WW2? The end of the war coincided with a drop in German propaganda film and therefore, a consequent reduction of German representation in movies. What about the representation of Jewish ? In Europe the representation of Jewish seems to be greatly impacted by the war as the significantly decrease starting form late 1930’s towards today. In parallel, 1930’s corresponds to a rise of antisemitism in Europe, and rise of exclusion laws for Jewish in Germany. Therefore, explaining the decrease in Jewish character proportion in movies. On the other hand, the representation of Jewish character in North America does not seem to get impacted between 1940 and 1950. Hence, we know World War 2 had a greater impact on Europe Jewish population compared to American Jewish population. Then the decrease observed in Jewish representation in Europe is most likely caused by WW2
 
@@ -170,6 +171,7 @@ What is the impact on German character ? In Europe, we observe a big rise in Ger
 <div class="redirect-buttons">
   <button class="redirect-button" onclick="window.location.href='{{ '/9_11' | relative_url }}'">Go to 9/11 Analysis</button>
   <button class="redirect-button" onclick="window.location.href='{{ '/' | relative_url }}'">Go to menu</button>
+  <button class="redirect-button" onclick="window.location.href='{{ '/conclusion' | relative_url }}'">Go to Conclusion</button>
 </div>
 
 <style>
@@ -181,6 +183,7 @@ What is the impact on German character ? In Europe, we observe a big rise in Ger
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
   }
   .redirect-button:hover {
     background-color:rgb(48, 48, 48);

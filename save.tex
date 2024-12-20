@@ -1,0 +1,1443 @@
+\documentclass[lettersize,journal]{IEEEtran}
+\usepackage{amsmath,amsfonts}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{array}
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfigure}
+\usepackage{textcomp}
+\usepackage{stfloats}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{gensymb} % degree symbol
+\usepackage{siunitx}
+
+% \usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{tabularx}
+
+\usepackage{placeins}
+
+\usepackage[none]{hyphenat}
+
+\hyphenation{op-tical net-works semi-conduc-tor IEEE-Xplore}
+% updated with editorial comments 8/9/2021
+
+\begin{document}
+
+\title{\textsc{Stepinator} \\ \LARGE {Removable Sole Adaptable to Slope Angle}}
+
+\author{Allegre Theodore, El Skaff Christy, Grandjean Emilie, Klose Lucie, Litzler-Italia Louis, Tafili Mentor \\ December 20, 2024}
+        % <-this % stops a space
+%\thanks{This paper was produced by the IEEE Publication Technology Group. They are in Piscataway, NJ.}% <-this % stops a space
+%\thanks{Manuscript received April 19, 2021; revised August 16, 2021.}}
+
+% The paper headers
+\markboth{ME-410 / Mechanical Product Design \& Development}%
+{Shell \MakeLowercase{\textit{et al.}}: A Sample Article Using  IEEEtran.cls for IEEE Journals}
+
+% \IEEEpubid{0000--0000/00\$00.00~\copyright~2021 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+\maketitle
+
+\begin{abstract}
+???? pas 100\% sure de l'abstract
+
+% Working on slanted surfaces poses significant challenges, including increased joint strain and long-term health risks such as osteoarthritis. Existing solutions offer limited adaptability and fail to address the need for dynamic adjustment on varying slopes.
+
+% This project introduces a wearable robotic shoe sole that autonomously adapts to ground slopes from 5° to 35°. Unlike current solutions, our device provides real-time adjustment without user intervention, enhancing stability, posture, and reducing physical strain. This lightweight, intuitive solution is designed for applications in construction, roofing, and outdoor tasks, setting a new standard for ergonomic and adaptive wearable technology.
+
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+Article submission, IEEE, IEEEtran, journal, \LaTeX, paper, template, typesetting.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\IEEEPARstart{O}{}ur project focuses on developing a wearable robotic device in the form of a supplementary shoe sole that dynamically and automatically adapts to ground slopes. This innovative design addresses critical need for individuals who frequently work or move on slanted surfaces, where maintaining proper posture and stability can be challenging.
+
+We chose this product to provide a practical, user-friendly solution to a well-documented problem. Research highlights that prolonged exposure to slanted surfaces significantly increases stress on the joints, particularly the knees and ankles, leading to a higher risk of musculoskeletal injuries and disorders such as osteoarthritis. A study published in \textit{Applied Ergonomics} emphasizes the importance of ergonomic, adaptive solutions to mitigate such risks, making our approach both relevant and necessary \cite{ref1}.
+
+Our device is a detachable shoe sole that automatically adjusts the foot’s angle to match the ground slopes, accommodating inclines of up to $35\degree$ and supporting weights exceeding $100 \;kg$. This capability represents a significant technological advancement, far surpassing current market options. By reducing the physical strain associated with poor posture on steep surfaces, our solution enhances safety, comfort, and efficiency for workers and others navigating such environments.
+
+
+\subsection{Motivation}
+
+Research has shown that prolonged standing or walking on slanted surfaces considerably increases stress and strain on the joints, often resulting in injuries over time. Studies indicate that construction workers face a $15\%$ to $30\%$ higher risk of developing osteoarthritis, while roofers encounter two to three times the average risk due to the challenging postures required by their work. \cite{ref1}
+
+Recognizing these challenges, our project is aims to improving the safety and well-being of workers exposed to steep surfaces. By reducing physical effort, minimizing fatigue, and alleviating joint strain caused by awkward body postures, our device enhances stabilization and support. This not only increases comfort but also lowers the long-term risk of musculoskeletal disorders.
+
+While our primary target audience includes workers in industries like construction and roofing, our solution also benefits individuals in fields such as outdoor maintenance, window cleaning, and even certain leisure activities that require navigating inclined surfaces.
+
+Our main objective is to develop an autonomous device that requires minimal user input while intuitively adapting to the terrain. By simplifying the challenge of maintaining stability on steep surfaces, the device empowers users to work or move more efficiently, safely, and comfortably.
+
+% \textbf{What is the average time of workers being on slated grounds/roofs}
+
+
+\section{State of the art}
+
+Our wearable device aims to address a significant gap in solutions for navigating slanted surfaces. By exploring existing market offerings, we identified key limitations in current technologies, guiding the development of our dynamically adjustable shoe sole.
+
+\subsection{Overview of Existing Solutions}
+
+Current slope-compensating devices fall into two main categories : \textit{Pneumatic} solutions and \textit{Manual} solutions. While these address specific aspects of the problem, they are limited in terms of dynamic adaptability and usability on steep slopes.
+
+\medskip \subsubsection{Pneumatic Solutions } \textcolor{magenta}{}
+
+Devices like the \textit{Push-Ups} \cite{ref2} and \textit{Inflashoe} \cite{ref3} use compressed air to create adjustable platforms beneath the shoe. These lightweight solutions accommodate shallow slopes (up to $5\degree$) but lack the ability to adapt dynamically. Users must manually inflate or pre-code the device when encountering different inclines. While innovative, these systems are unsuitable for terrains with frequently changing slopes due to their reliance on manual adjustments. In contrast, their primary purpose lies not in slope compensation but in relieving foot pressure or simulating motion, such as mimicking the experience of skiing downhill.
+
+\begin{figure}[!ht]
+\begin{minipage}[c]{0.45\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/intro/pushUps.JPG}
+    \caption{Push-Ups}
+    \label{pushups}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.45\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{images/intro/inflashoes.png}
+    \caption{Inflashoes}
+    \label{inflashoes}
+\end{minipage}
+\end{figure}
+
+
+\subsubsection{Manual Solutions } \textcolor{magenta}{}
+
+Tools such as the \textit{Pitch Hopper Roof Wedge} \cite{ref4} are popular in construction and roofing for providing a stable platform on steep angles. These devices can handle inclines greater than $30\degree$, making them effective for static tasks. However, they require users to manually reposition the device with every change in slope, limiting practicality for continuous movement across variable inclines.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.7\linewidth]{images/intro/pitchHopper.jpg}
+\caption{Pitch Hopper Roof Wedge}
+\label{pitchhopper}
+\end{figure}
+
+\subsection{Limitations of Existing Solutions}
+Both categories of existing slope-compensating devices share critical limitations :
+
+\begin{itemize}
+    \item Lack of Dynamic Adjustment : Neither pneumatic nor manual solutions can automatically adapt to changing slopes in real time.
+
+    \item Limited Slope Range : Pneumatic devices are confined to shallow angles, while manual devices require frequent repositioning for different slopes.
+
+    \item Usability Concerns : Current solutions often involve cumbersome placement or manual adjustments, introducing operational inefficiencies.
+\end{itemize}
+
+
+Therefore, our proposed device addresses these shortcomings by incorporating automatic dynamic adjustment for a broad range of slopes. Unlike existing solutions, it autonomously adapts to inclines from $5\degree$ (almost flat surfaces) to close to $35\degree$ ($70\%$ slope) without requiring user intervention.
+
+This innovation simplifies the user experience, eliminating manual adjustments, and enhances safety and stability. its intuitive design ensures seamless functionality, making it suitable for construction, roofing, outdoor maintenance, and even aiding individuals with limited mobility in hilly areas (e.g. in the city of Lausanne).
+
+By leveraging advanced materials and electromechanical systems, our solution bridges the gap between usability and performance, setting a new standard for slope-compensating devices.
+
+
+\subsection{Conclusion}
+
+While existing technologies provide foundational solutions, they lack the real-time adaptability necessary for effective slope compensation. Our device builds on these advancements, integrating dynamic, autonomous adjustments into a lightweight, practical design capable of supporting users in demanding environments.
+
+
+\section{Engineering specifications}
+
+This section outlines the engineering specifications of our model, including its primary target functions and sub-functions that define its performance. 
+
+\subsection{Main Functions}
+\begin{enumerate}
+    \item Dynamic adaptation to the angle of sloped terrain, providing a level surface for the user's foot.
+
+    \item Support for user weight.
+
+\end{enumerate}
+
+\subsection{Sub-Functions}
+\begin{enumerate}
+    \item Adaptation speed fast enough to adjust during a single step.
+
+    \item Compact and lightweight design to minimize bulk for the user.
+
+\end{enumerate}
+
+\subsection{Working Principle}% + definition of the system ?}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{images/intro/workingPrincipal.png}
+\caption{Working Principle}
+\label{pitchhopper}
+\end{figure}
+
+Our model is split into a mechanical and an electrical part. ...???
+
+\subsection{Engineering Specifications Criterion}
+\begin{enumerate}
+    \item[C1.] \textbf{Maximum Obtainable Angle $45\degree$} - The mechanism must accommodate a slope gradient of up to $100\%$, equivalent to $45\degree$.
+
+    \item[C2.] \textbf{Required Torque} .. - \textcolor{red}{justification ? Pour moi, Theodore, ça dégage ça, je retirere le 19.12 a 23h35 ce commentaire de ça dégage}
+
+    \item[C3.] \textbf{Adjustment Speed $>10\degree/sec$} - In a typical gait cycle during walking, the foot is in contact with the ground (stance phase) for approximately 60\% of the cycle and in the air (swing phase) for about 40\%. With an average cadence of 80 steps per minute, each step takes approximately 0.75 seconds (1 step = $60 \, \text{seconds} \div 80 \, \text{steps}$).
+
+The swing phase, which occupies 40\% of this duration, has an average duration of:
+\[
+\text{Swing phase duration} = 0.75 \times 0.40 = 0.3 \, \text{seconds}.
+\]
+
+Currently, data on slope variation between consecutive steps is limited. However, a reasonable assumption is that the slope variation between two steps rarely exceeds $3^\circ$. This value corresponds to a scenario where the slope changes from $0^\circ$ to $45^\circ$ (a 100\% incline) over the course of 15 steps.
+
+To correct a slope variation of $3^\circ$ within the average swing phase duration of 0.3 seconds, the required angular correction speed can be calculated as:
+\[
+\text{Angular speed} = \frac{\text{Slope variation}}{\text{Swing phase duration}} = \frac{3^\circ}{0.3 \, \text{s}} = 9^\circ/\text{s}.
+\]
+
+To account for uncertainties and ensure reliable performance, we have chosen an angular speed specification of \textbf{10$^\circ$/s}. This provides a margin for error while accommodating typical slope variations encountered during walking.
+
+
+    \item[C4.] \textbf{Device Total Height $<7\;cm$} - The mechanism must fit within a compact design to avoid making the sole excessively bulky.
+
+    \item[C5.] \textbf{Device Total Weight $< 2\;kg$} - Ski boot's weight usually ranges from 1.5 kg to 2.5 kgs. We decided to choose the average ski boot weight as a benchmark not to exceed for our device.
+
+    \item[C6.] \textbf{Maximum User Weight $> 110 \; kg$} - A maximum weight specification of 110 kg is reasonable because it comfortably covers the upper range of the global population. According to ourworldindata.org, the 95th percentile for BMI for men is 30. The average height worldwide for men is 1.70m. From these values we can calculate the 95th percentile for an male adult's weight : 
+    30*1.70² = 86.7 kgs. By setting the limit at 110 kg, we include most users, addressing a broad and practical user base, while also accounting for those on the higher end of the weight distribution.
+\end{enumerate}
+
+% \newcolumntype{A}{>{\centering \arraybackslash} m{0.05\linewidth}}
+% \newcolumntype{M}{>{\centering \arraybackslash} m{0.175\linewidth}}
+% \renewcommand{\arraystretch}{1.5}
+
+% \begin{table}[!ht]
+% \begin{centering}
+% \begin{tabularx}{1\linewidth}{|A|M|M|M|M|}
+%  \hline
+%    & Target Values & Justification \\ [0.5ex] 
+%  \hline\hline
+%   C1 &  $45\degree$ & $15\degree$ & $25\degree$ & $\degree$\\
+%  \hline
+%   C2 &  $< 10Nm$  & $2.79 Nm$ & $4.56 Nm$ & $ Nm$ \\
+%  \hline
+%    C3 &  $> 10\degree/sec$  & $10.47\degree/sec$ & $17.45\degree/sec$ & $\degree/sec$ \\
+%  \hline
+%    C4 &  $< 7cm$  & $2.68cm$ & $4.66cm$ & $2.68cm$ \\
+% \hline
+% \end{tabularx}
+% \caption{Solutions Comparison}
+% \label{comparisonTable}
+% \end{centering}
+% \end{table}
+
+
+
+\section{Experimental setup/ methods (demo)}
+
+\subsection{Performance Specifications}
+
+- describe how you will measure the performance of the proposed design
+
+Many different test were performed to check if the specifications of the design are met. 
+
+
+For the speed of the mechanism, many different angle variations were tested to see the time it to take to cover this distance. As a reference, the mean walking speed of a person is around \SI{1}{m/s} which represents approximately \textbf{one step per second}. This value was taken from a paper about "Gait Speed" \cite{step}. The researchers performed tests on many different type of population which goes from healthy people to patients that are recovering from, or currently encountering, different kind of health issues. For the purpose of the project, the value above was taken from the tests performed on a \textbf{non-specific type of population}. The reason is that, this kind of population tend to have faster speed values as it is composed also of people who do not have mobility handicaps. Therefore, by taking those values, the device is confronted to the worst case scenario.
+
+
+Then, for the maximum acceptable weight, a total load of \SI{130}{kg} was put on top of the device to see if it could endure it or not.
+
+
+
+
+- describe how the proposed measurement is sufficient to show case the validity of the design
+
+- describe how the results can be improved and how the can be measured
+\textcolor{red}{TO DO}
+
+
+\section{Solution options}
+
+% - 2-3 principal solutions \& functional impact --> create a solution options table (solution A, B, C) with numbers to show how the design impacts the engineering specifications
+% - solution calculations (for each proposed solution)
+% - sketched
+% - well defined working principle
+% - basic calculations for checking solution validity --> put that in the Solution options table
+
+In this section, we outline various design options for the transmission system. While each option is feasible, a comparative analysis helped us identify the optimal design that best satisfies our predefined criteria.
+
+\subsection{Solutions Description}
+
+\subsubsection{Option A - Direct drive on rotation axis }
+
+The design places the motor at the pivot point, with force applied at the midpoint of the sole. It takes inspiration from the ratchet strap mechanism, which permits rotation in one direction while blocking it in the other. This mechanism effectively supports the user's weight mechanically, reducing the load on the motor and eliminating the need for it to counteract the user's weight. However, our application requires rotation in both directions, a feature that is difficult to achieve with this system. To address this, we propose incorporating a small mechanical component (illustrated in red in the diagram in Figure \ref{optionA}). This component would be actively controlled to engage and block the mechanism during the stepping phase, ensuring stability. It would then be disengaged during the angle correction phase, allowing free rotation as the user lifts their foot.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\linewidth]{images/solutionOptions/optionA.jpg}
+\caption{Option A - Direct drive on rotation axis}
+\label{optionA}
+\end{figure}
+
+With an average foot length of $30 \;cm$, the distance from the pivot point to the force application point is $15 \;cm$. The torque can be calculated as :
+
+\begin{equation*}
+\text{Torque} = \text{Force} \times \text{Distance} = 110 \times 9.81 \times 0.15 = 161.715 \; \text{Nm}
+\end{equation*}
+
+The torque required is significant, making it challenging to design a non-backdrivable mechanism capable of handling such high torque while meeting our specifications. Additionally, the material for the top sole must be carefully chosen to maintain rigidity with only one support point, while also being lightweight and cost-effective.
+
+To analyze the speed and torque requirements, we assume a scenario where the motor is responsible for lifting only the mechanism’s weight. According to our specifications, the maximum weight is 2.5~kg, assumed to be located at the rear of the sole (30~cm from the pivot point). The torque required in this situation can be calculated as:  
+
+\[
+T = 0.3 \times 2.5 \times 9.81 = 7.35 \, \text{Nm}.
+\]
+
+As a reference, the largest DC motor available in the Pololu shop~\cite{pololu} is rated for 5.4~Nm at 65~RPM. To ensure reliability, we apply a safety factor of 2, leading to a required torque of:  
+
+\[
+T_{\text{required}} = 7.35 \times 2 = 14.7 \, \text{Nm}.
+\]
+
+We can then determine the necessary transmission ratio ($i$) to meet this torque requirement:  
+
+\[
+i = \frac{T_{\text{required}}}{T_{\text{motor}}} = \frac{14.7}{5.4} \approx 2.7.
+\]
+
+Using this transmission ratio, the resulting final rotational speed of the mechanism can be calculated as:  
+
+\[
+\omega = \frac{\text{Motor Speed}}{i} = \frac{65}{2.7} \approx 24 \, \text{RPM}.
+\]
+
+Converting this to angular velocity:  
+
+\[
+\omega = \frac{24 \times 360}{60} = 144^\circ/\text{s}.
+\]
+
+This calculated speed is quite high, but it is worth noting that the actual speed may decrease depending on the design of the non-backdrivable mechanism. If the transmission ratio is increased during development, the speed will decrease accordingly. 
+
+\medskip \subsubsection{Option B - Moving wedge } \label{OptionB}
+This design features a sliding block that increases the angle adaptation as it moves closer to the front. The wedge would be attached to the bottom sole and moved with a transmission mechanism. This tranmssion mecanism was thought as a carriage that is moved with a belt. A spring is linking the top and botom sole to avoid the botoom sole to drop and open the shoe when the we lift the feet in the air.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{images/solutionOptions/optionB.jpg}
+\caption{Option B - Moving wedge}
+\label{optionB}
+\end{figure}
+
+To reduce torque and prevent bending of the top sole, the support is positioned in the second half of the mechanism. This approach distributes the load more evenly, minimizing the risk of instability if excessive weight is applied to the back of the shoe.
+
+Assuming the device length is $30 \;cm$ and a maximum height of $7 \;cm$, as specified, we denote the device length as $L_1$ and the wedge's midpoint position as $L_2 = 15\;cm$. At this position, the maximum angle can be calculated as follows :
+
+\begin{equation*}
+    \alpha = \arctan \left( \frac{7}{15} \right) = 25 \degree
+\end{equation*}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/solutionOptions/optionBcalculations.png}
+    \caption{Principal Mechanism}
+    \label{wedge mecanism}
+\end{figure}
+
+
+
+For the speed calculation, we will make the following assumption : 
+\begin{itemize}
+    \item To overcome the friction and move the wedge, the biggest motor from Pololu \cite{pololu} with a torque of $5.4 Nm $ and speed of $65RPM$ is powerful enough. 
+    \item We respect the 7 cm height which means that the motor pulley to drive the belt that moves the wedge cannot be more then $7cm$ 
+    \item We we assume a $5cm $pulley diameter to account for a safety margin to assemble the componnents
+\end{itemize}
+The speed calculation with a $r = 5cm$ pulley and a $\omega_m = 65 RPM$ motor :
+V is the linear speed of the wedge
+\begin{equation*}
+    v = \frac{\omega_m}{60}*2*\pi*r = 34 cm/s
+\end{equation*}
+This means that to 15 cm to go from min angle to max mangle we need $15/34 = 0,44 sec$ and as the max angle is $25°$ the angular speed is $\frac{25}{0,44} = 56 \degree / sec$
+
+
+
+\medskip \subsubsection{Option C - Lead screws }
+\textcolor{green}{ add description}
+This option is similar in the working principle of the mechanisme \ref{optionB}. Two plates are linked together at one extremity and are spread appart thank to sliders attached to a lead screw that are pulled and pushed and raises or lower to beam that join the 2 plates. 
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\linewidth]{images/solutionOptions/optionC.jpg}
+    \caption{Option C - Lead screws}
+    \label{optionC}
+\end{figure}
+
+Assuming we use the following components : 
+\begin{itemize}
+    \item Lead screw : 4 thread, 2mm pitch, 8mm lead. This specific lead screw is chosen as it is the format found in the z axis of 3d printer and it is widely available.
+    \item Worm Gear : speed ratio 1/10 (smallest ratio found on Misumi)    
+\end{itemize}
+
+
+Using a $2200 RPM$ motor from Pololu \cite{pololu}, the final speed is calculated as follow
+The transmissionr ratio from motor to to linear carriage is calculated as follow. 
+$v = i_{worm\_gear} * \frac{\omega_m}{60} * lead = 1/10 * 2200/60 * 0,008 = 3cm/s$
+Speed to go from min angle to max angle (25°) knowing that the carriage moves 15 cm: 25/ (15 /3) = 6.6 \degree/sec
+
+
+
+
+
+
+\subsection{Solutions Comparison}
+
+\newcolumntype{A}{>{\centering \arraybackslash} m{0.05\linewidth}}
+\newcolumntype{M}{>{\centering \arraybackslash} m{0.175\linewidth}}
+\renewcommand{\arraystretch}{1.5}
+
+Engineering Specifications Criterion :
+\begin{enumerate}
+    \item[C1.] Maximum Obtainable Angle 
+
+    \item[C2.] Maximum Torque 
+
+    \item[C3.] Adjustment Speed
+
+    \item[C4.] Device Total Height
+\end{enumerate}
+
+\begin{table}[!ht]
+\begin{centering}
+\begin{tabularx}{1\linewidth}{|A|M|M|M|M|}
+ \hline
+   & Target Values & Option A & Option B & Option C  \\ [0.5ex] 
+ \hline\hline
+  C1 &  $45\degree$ & $15\degree$ & $25\degree$ & $\degree$\\
+ \hline
+  C2 &  $< 10Nm$  & $2.79 Nm$ & $4.56 Nm$ & $ Nm$ \\
+ \hline
+   C3 &  $> 10\degree/sec$  & $10.47\degree/sec$ & $17.45\degree/sec$ & $\degree/sec$ \\
+ \hline
+   C4 &  $< 7cm$  & $2.68cm$ & $4.66cm$ & $2.68cm$ \\
+\hline
+\end{tabularx}
+\caption{Solutions Comparison}
+\label{comparisonTable}
+\end{centering}
+\end{table}
+
+\textcolor{green}{ Add blabla de comparaison}
+Option A : The direct drive of this option is interesting as it allows for high speed and simple control. However, the complexity to design mecanism or buy a non drivable gearbox that is compact enough and can withstand such high torque and forces, makes this solution not worth selection. The cost would be to high if we go with a prebuild gearbox, or the weight / bulkiness of a custom mecanism designed in house and that needs to be build only in a few weeks would cause problem.  Also having all the weight transfered only at the tip, would raise a friction problem. In real life, material or flexible and the ground is not even. Having all the weight transfered at the tip would significate that the overall pressure on the bottom sole would be very high but located on a small area at the tip of the sole which would result in less friction. 
+
+Option B : This option gives promising result. The angle is not fantastic but in an acceptable range. \\
+However, first, the spring that stops the bottom plate to fall when we lift the shoe is a very big unknown until the last stage of developement : it has to be designed ideally only to support the weight of the shoe. But with iteration, and component being added at the last minute, sizing the spring would be a last minute job but it is a crucial component. Also WIth a spring, it would generate constant force the more the shoe is open / on a high slope, which would increases at an unknwon rate the friction and efficiency and could stall the motor. 
+ Finally this mecanism is backdrivable, which means that the motor will have to actively compensate the weight. Such DC motors are not a good choice for that due to their brushed nature. By stalling a DC motor, we can easily burn it and it's driver.
+
+Option C : The main downfall of this mechanism is the speed compared to the previous mechanism. However, first, with the length and placement of beams, we calculated that we can improve the max angle (see final design). Then it is non backdrivable which allows to use a DC motor and respect weight and size constraint. The transmission  is fairly simple. Lot's of component but all of them are simple to install. This solution was chosen as we can improve the max angle and the whole mecanism is robust and fits more in traditional mechanics transmision.   
+
+
+
+\subsection{Design}
+
+
+\subsection{Control}
+
+bla bla control ?
+
+\section{design iteration from the chosen solution}
+
+% - describe quantifiable outcomes from the proposed solution (some initial results may be included)
+% - describe the design change on the proposed solution and show the updated numbers
+% - for the chosen solution and the design update how they will behave under the "worst case scenario"
+
+
+\subsection{Transmission} \textcolor{green}{Theodore}
+
+One of the primary challenges of this mechanism is ensuring the effective transmission between the motor and the two lead screws, such that they move simultaneously. The lead screws considered were from widely available 3D printers, featuring a lead of 1 mm, a 4 mm pitch, and 4 threads.
+
+This design for the lead screw is backdrivable due to the negative torque.
+\textcolor{red}{Add calculation :}
+
+Consequently, the transmission between the lead screws and the motor will experience some of the applied force. This force will be static and significant, as the sole will not move when weight is applied.
+
+Initially, we considered using a timing belt. However, this option was discarded due to the following reasons:
+\begin{itemize}
+    \item Complexity of the belt tensioning mechanism
+    \item High forces involved
+    \item Cost of the pulley; 3D printing was not feasible due to the forces in play
+\end{itemize}
+
+We then explored the use of axes with 90-degree gears. This option allowed us to source sufficiently strong materials for the axes and belts.
+
+The main drawback of this mechanism is its backdrivability. Initially, we planned to use the motor as an active brake, compensating for the applied force to prevent movement. However, we could not find a motor that was both powerful enough and small enough for our application.
+
+To address the backdrivability issue, we considered incorporating a worm gear at the motor output.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{images/mechanicalDesign/wormGearTransmission.png}
+\caption{Transmission mechanism with the Lead screws and Worm gears}
+\label{optionCTransmission}
+\end{figure}
+
+
+
+The challenges with this mechanism include:
+\begin{itemize}
+    \item Complex transmission
+    \item Multiple axes requiring stabilization: two lead screws and the motor shaft at both ends, due to the worm gear, the downforce needs to be supported at both extremities and the lateral axis
+\end{itemize}
+    
+    
+
+Our initial mindset was limited to making this design work, which constrained our problem-solving approach.
+
+It is when we constructed a prototype as seen in Figure \ref{fig:Transmission prototype} that we identified these previous issues.
+\begin{figure} [ht]
+    \centering
+    \includegraphics[width=\linewidth]{images//mechanicalDesign/prototype_1st.png}
+    \caption{Transmission prototype of 1st iteration}
+    \label{fig:Transmission prototype}
+\end{figure}
+
+
+
+
+\\  
+Following advice from the spot team, we developed a \textbf{new and final solution}:
+
+- Use a single M8 screw instead of two lead screws. The M8 screw is not backdrivable, maintains the same speed ratio, and requires only one axis with direct drive. The initial design with two lead screws aimed to distribute the force and support the weight. However, with a well-designed top platform, a single support point is sufficient if there are already two distant pivot points.
+
+Speed ratio calulcation : Before from Motor speed to linear speed we had the following ratio : $i = i_{worm\_gear} * lead = 0,1*0,008 = 0.0008$. Now we only have $i = lead = 0,00125$ so our ratio is actually higher.
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{images/mechanicalDesign/M8Transmission.jpg}
+\caption{Final Solution Transmission Mechanism}
+\label{finalSolTransmission}
+\end{figure}
+
+
+
+
+
+\section{Final solution presentation}
+
+% - CAD model with dimensions - Appendix : but the critical component should be within the manuscript with sufficient dimensions to understand the working principles and dimensions
+% - flowchart of the working principle
+% - schematic of the control logic (actuator sensor feedback loop with input output)
+% - working principle and selection justification
+% - a full theoretical modeling of the final solution
+% - appropriate graphs and modeling results that compares to the engineering specification requirements
+% - evaluation (performance comparison)
+
+\subsection{Design}
+\subsubsection{General overview } \textcolor{green}{Theodore} 
+
+\input{General Overview}
+
+\subsubsection{Attachment }\textcolor{magenta}{}
+
+To design an intuitive sole attachment, we opted for a mechanism using Velcro straps. This choice not only simplifies use but also ensures compatibility with various shoe sizes, making the device suitable for most users.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\linewidth]{images/mechanicalDesign/velcrosAttachment.png}
+\caption{Attachment}
+\label{straps}
+\end{figure}
+
+\subsubsection{TPU sole }\textcolor{magenta}{}
+
+After careful consideration, we selected TPU as the material for the anti-slip sole of our device, which we 3D printed. The anti-slip design incorporates our logo along with truncated pyramids, providing a larger surface area to enhance grip and prevent users from slipping during use. To validate the design, smaller prototypes of the sole were printed and tested for functionality.
+
+%  \textcolor{violet}{Emilie \& Lucie} idée de justification : 
+% printed a small test of x area, put a proportional weight  = (device\_wieght/final\_weight) * area\_of test piece on a 33 angles slope (oups pas de photo
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\linewidth]{images/mechanicalDesign/TPUantidep.png}
+\caption{TPU sole}
+\label{TPUsole}
+\end{figure}
+
+\subsubsection{Simulation }\textcolor{magenta}{Mentor}
+
+The simulations were done using the fusion 360 software. They were performed in a static way to represent accurately the forces and the stress applied to our device. 
+
+
+The type of steel we used to built our device is the SJ235 \cite{SJ235} steel available at the SPOT. This steel is often used for construction purposes and usually helps to support high loads. As the name of the material indicates, its yield strength is $Re = \SI{235}{Mpa}$, and the ultimate tensile strength of the SJ235 is $Rm = \SI{510}{Mpa}$. 
+
+
+During the tests, a load of 130 kg was applied on the top platform, which would represent the maximum weight our device could achieve to hold. For this amount of weight, the maximum stress induced in the mechanism, and given by the simulations, is $\sigma_{max} \simeq \SI{127.428}{MPa}$. This value is a lot below the value of the yield strength of the SJ235 steel and even more from its ultimate tensile strength. After performing many different simulations for many different angles, we realized that this maximum stress was created for an angle of 29°, as it can be seen in the Fig.14.
+
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\linewidth]{images/mechanicalDesign/MaxStress.png}
+    \caption{\centering Max stress applied to the mechanism}
+    \label{fig:Mechanical_simulation}
+\end{figure}
+
+
+As it is shown in the Fig.15, the stress is mainly present in the middle of the mechanism where the top and bottom part of the mechanism are linked. More specifically, the maximum amount of stress is created on the middle beams that directly link the two elements. Therefore, we decided to make the those pieces \SI{5}{mm} thick, which was the maximum manufacturable thickness of steel possible with the metal laser cutter at the SPOT. And it also assured us that the mechanism would hold the weight as \SI{5}{mm} is already quite thick, and it would not add too much weight to the mechanism either.
+In Fig.16, the stress induced on the top plateform of the sole is shown. It is pretty homogeneous on the whole surface, apart from the middle zone which has the linking mechanism right below, and therefore has more stress applied on this zone.
+\newline
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\linewidth]{images/mechanicalDesign/full_mechanism_simu.png}
+    \caption{\centering Stress on the linking mechanism}
+    \label{fig:Mechanical_simulation}
+\end{figure}
+
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\linewidth]{images/mechanicalDesign/topPlateformStress.png}
+    \caption{\centering Stress on the top sole}
+    \label{fig:Mechanical_simulation}
+\end{figure}
+
+
+With those numerical values and dimensions, it is now possible to calculate the safety factor of our device. As we have a material with a yield strength of $Re = \SI{235}{MPa}$ and a maximum induced stress of $\sigma_{max} \simeq \SI{127.428}{MPa}$, we can calculate the safety factor of the mechanism which is equal to :
+
+\begin{equation}
+    S = \frac{Yield\_strength}{Max\_stress} = \frac{Re}{\sigma_{max}} \simeq 1.85
+\end{equation}
+
+which is totally sufficient for the purpose of our device as this is not meant to use for running, but more for constant pace walking or even static cases. This value is mainly limited by the dimensions of the pieces that we made. As said before, the maximum thickness of steel that can be manufactured with the metal laser cutter at the SPOT is \SI{5}{mm}. But by making thicker pieces, the mechanism could support more stress, and therefore have a higher safety factor. But again, for the purpose of the device, the value we have is high enough.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\linewidth]{images/mechanicalDesign/displacement.png}
+    \caption{\centering Displacement induced by the load}
+    \label{fig:Mechanical_simulation}
+\end{figure}
+
+\bigskip
+
+Finally, this load implies a small displacement of the top platform. For this parameter, the critical angle is again of 29° and the displacement induced is \SI{5.57}{mm} as it is shown in the Fig.17. 
+
+\bigskip
+
+We can therefore conclude that our device meets the weight specifications that were initially set at the beginning of the project, which consist of being able to hold a total load of \SI{130}{kg} for an angle going up to 33°.
+
+
+\bigskip
+
+\newpage
+\subsubsection{Transmission } \textcolor{green}{reformat maybe ?}
+
+\textbf{The actuator} is a DC motor secured in place with 3D-printed parts. It features a round output shaft with a flat side. We machined a custom adapter to increase the shaft diameter, allowing it to connect to a \textbf{flexible shaft coupling}. This mechanical piece is critical for adjusting any misalignment due to assembly and fabrication precision.
+
+On the other side of the coupler is the M8 screw. The M8 screw is held in place with two mechanical bearings, which were purchased and then assembled on a 5 mm laser-cut steel plate.
+
+The \textbf{mechanical bearings} support the screw while allowing it to rotate with minimal friction. The steel plates are secured with two M3 screws along the thickness. Although this is not ideal due to the 5 mm thickness of the plate, it was sufficient for prototyping purposes, given the available materials. A more robust solution can be easily designed and implemented for future iterations. The structural integrity of this assembly is calculated in section \ref{section:Strength}.
+
+To lock the screw in the lateral direction along its length, two M8 bolts were added just before the rear mechanical bearing to act as physical stops. Two bolts were necessary for their self-locking capability.
+
+\textbf{The slider}, which moves with the rotation of the M8 screw, was custom-built from a solid block of aluminum. We threaded an M8 screw hole into the block. At the same height as the M8 screw thread, we also threaded two M4 holes perpendicular to the M8 screw to accommodate M4 bolts, which act as the shaft for the vertical beam. These M4 bolts were placed at the same level as the M8 screw to avoid creating torque.
+
+The main fixed pivot point was also custom-designed to be screwed from the bottom and serves as the pivot point, accommodating an M5 screw. Using an M5 screw as a pivot point is not ideal mechanical practice; however, for prototyping, this solution was preferred due to its simplicity and ease of assembly. A more robust solution can be designed for future products.
+
+The vertical beams are secured at the top of the shoe by passing through a shaft that links the two metal plates at the top of the shoe. This shaft was threaded to be fixed with nuts. This fixation method is advantageous as it allows for easy positional adjustments by simply drilling new holes in the lateral metal plates and securing the new shaft.
+
+One issue with this shaft is its length, as the fixation points are on the lateral plates, but the force is applied in the middle. This configuration subjects the shaft to significant stress. To mitigate some of this stress, we added a 3D-printed block on the shaft in the middle, next to the vertical beam. This block acts as a spacer for the beams and redirects forces to the wood on top of the shaft, where the foot is placed, preventing the shaft from bending. We did not fix the 3D-printed part to the top of the sole, which was a mistake. The 3D-printed part should have been fixed to the sole to transfer the horizontal component of the force to the sole. Without this fixation, the horizontal component of the force is only transferred to the beam, which can bend. Therefore, in future designs, this part needs to be securely fixed.
+
+\bigskip
+
+\subsubsection{Beam lengths } \textcolor{magenta}{Mentor}
+
+In this section, the goal is to explain how we decided the dimensions of the device. More precisely, the beams that can be found on the top platform and the ones that link the top platform to the slider of the bottom platform.
+
+For the top ones, we wanted to have a length of mechanism of \SI{30}{cm}. Therefore, the choice of length was clear. But for the middles ones, more calculation was needed.
+
+
+On the Fig.17 and Fig.18, the two extreme positions are shown. One with the device at lowest position and the other at the top position. 
+
+
+For the maximum angle, the objective was for the middle beams to be perpendicular to the the top platform when it would meet the highest position as shown in the Fig.17. The reason was that, if the beams could go further behind, it would permit the top platform to bend a lot more than currently, because the beams would not block their movement as the would also be bending but in the other direction this time. And therefore, it would have been a lot more fragile and the chances of top platform breaking would have been much higher. 
+
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\linewidth]{images/mechanicalDesign/beamLengthMax.png}
+    \caption{\centering Maximum possible angle}
+    \label{fig:Mechanical_placement}
+\end{figure}
+
+
+On the Fig.18, we can see the lowest position of the device. In this case, we goal was for the beams to not be too long for the mechanism to stay inside the \SI{30}{cm} range desired.
+
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\linewidth]{images/mechanicalDesign/beamLengthMin.png}
+    \caption{\centering Minimum position of the device}
+    \label{fig:Mechanical_placement}
+\end{figure}
+
+
+Therefore, the dimensions were chosen arbitrarily to match the two conditions listed above. The middle beams used to link the two parts of the mechanism have a length of \SI{11}{cm} and a thickness of \SI{5}{mm}. Those values were previously tested on the 3D design to assure that it would match the specifications. 
+
+
+\bigskip
+
+
+\subsubsection{Strength} \label{section:Strength}\textcolor{green}{Theodore}
+The strength verification will be using the following procedure : 
+\begin{enumerate}
+    \item The maximu force applied (130 kg)will be used as the maximum force for each individual component. 
+    \item We identify the weakest ellement missed by the simulation
+    \item we verify that they support the max force
+    \item We assume every other componenet will support the weight
+\end{enumerate}
+
+The following components were found to be the weakest : 
+\textbf{M8 Screw}
+The M8 screw for the transmission will receive most of the force, it is imperative that it can withstand the force : 
+In traction. The screw as an area of $A_s = 34.7 mm^2$, It class is 8.8 meaning it has a tensile strength of $800Mpa$ and a yield strength of $640 Mpa$ 
+\begin{equation*}
+    F_{max} = R_m*A_s = 22 008 N 
+\end{equation*}
+This is more then our max force by a factor of 17. 
+
+\textbf{Slider thread}
+As we manufactured the sldier ourselved with a custom thread, we wanted to make sure it will hold. The size is an M8 screw, the thicjnes  is $t = 1 cm$. The outer dimater is $d_{ext} = 8mm$ the innes diameter is $d_{int} = 6.64 mm $
+We can approximate a thread area by : 
+\begin{equation*}
+    A = A_{ext} - A_{int} = \frac{\pi}{4} (d_{ext}^2 - d_{int}^2) = 15 mm^2
+\end{equation*}
+
+Over $1cm$ with a lead of $1,25 mm $ we have $8$ thread , bringing the total area to $15*8 = 120 mm^2$. 
+The max shear force it can hold knwing that it is yield strength of the worst aluminum is $R_m = 60 Mpa $ (we don't knwo the grade of our aluminum) and we take a shear ratio of $0,6$. 
+\begin{equation*}
+    F_{max} = R_m*A * 0.6 = 4400 N 
+\end{equation*}
+The safety factor is 3.3 for this component 
+
+
+\textbf{M3 screws}
+The mechanical bearings are held into place with 2 steel plate that are attached to the wood with M3 screw scrwed along the thicknes sof the plate. 
+This means that they will also receive the maximum ampunt of force. 
+The screw as an area of $A_s = 4.7 mm^2$, It class is 8.8 meaning it has a tensile strength of $800Mpa$ and a yield strength of $640 Mpa$.we take a shear ratio of $0,6$. 
+\begin{equation*}
+    F_{max} = R_m*A_s*0.6 = 1808 N 
+\end{equation*}
+This gives us a safetu factor of 1.3 but as there is 2 screws, it is higher (2.6)
+
+\bigskip
+
+\subsubsection{Motor : Speed} \textcolor{green}{Theodore}
+
+We have the following information : 
+\begin{itemize}
+    \item Lead of the M8 screw $l = 1,25 mm$
+    \item To go from min angle to max angle ($\theta_{max} = 33°$ : slider moves distance $ d= 11cm$
+    \item Motor speed is $\omega_m = 2200 RPM$
+\end{itemize}
+
+The slider speed is $v$: 
+\begin{equation*}
+    v = \frac{\omega_m}{60}*l = 4,5 cm/sec
+\end{equation*}
+It takes us : 
+\begin{equation*}
+    t = d/v = 11/4.5 = 2.44 sec
+\end{equation*}
+to go from 0 to 33\degree in theory.
+
+In practice we measured with a timer that it was taking $\textbf{3sec}$. 
+This is due to the facte that there is load on the motor which reduces it's speed, and the that the efficiency of the mechanical assembly is not perfect as it is prototype. 
+
+
+\bigskip
+
+\subsubsection{Motor strength} \textcolor{green}{Theodore}
+The goal of the mecnism is to only lift itself, we measured that it's whole weight is 1.5 kg. 
+
+An M8 screw with a lead $l = 1.25mm$ tranmsiion  used like in our system can support lift the following weight for a torque $T = 0.1624 Nm$ from our motor (see later): We assume an efficieny of $\eta = 40\%$
+\begin{equation*}
+    F =2\pi  \eta  \frac{ T}{l} = 326 N = 32 kg 
+\end{equation*}
+It is enough for our application. However we still observed that the motor was stalling at the lowest position $\theta = 0\degree$. This can be due to the following reason : 
+\begin{itemize}
+    \item The motor can use of to 5.6 Amp but we limited it to 3 A due to the wire size and to avoid damaging it 
+    \item Poor overall efficieny of our mecanism : It is prototype, we tried to use processes to be as precise as possible (machining, laser cutting) but the mix of materials, the assembly, will reduce the efficnecy.
+    \item Static friction : We neglected the static friction that could be higher then anticipated in low position. 
+    
+\end{itemize}
+
+
+
+\bigskip
+
+\subsubsection{Electrical design } \textcolor{green}{}
+
+\medskip
+
+\noindent \textbf{Overview}
+
+\medskip
+
+Our device incorporates the following electronic components :
+
+\begin{itemize}
+    \item 1 DC Motor
+
+    \item 1 Motor Driver
+
+    \item 1 9-DOF IMU Sensor
+
+    \item 2 Load Cells
+
+    \item 1 Load Cell Amplifier
+
+    \item 2 Limit Switches
+
+    \item Arduino Uno R3
+\end{itemize}
+
+\medskip
+For the prototype, the two load cells were temporarily replaced with buttons due to a defective load cell. However, the principles and functionality of the device remain unchanged. A schematic overview of the electronic circuit is presented below.
+
+% On the electronic side, our device is composed of one \textbf{DC motor}, one \textbf{motor driver},  one \textbf{9-DOF IMU sensor}, two \textbf{load cells}, one \textbf{load cell amplifier} and two \textbf{limit switches}. Our computational unit is an \textbf{Arduino Uno R3}. It should be noted that for the prototype, we changed the two load cells for two \textbf{buttons} because one load cell was defective, but the principles and functionality of our device remain unchanged. An overview of our electronic circuit is presented below. 
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\linewidth]{images/electricalPart/electronic_circuit.jpeg}
+    \caption{\centering Electronic circuit schematic}
+    \label{fig:Electronic_circuit}
+\end{figure}
+
+% \FloatBarrier
+\noindent \textbf{Electronic Components Placement}
+\medskip
+\begin{itemize}
+    \item DC Motor : The motor is mounted on the bottom platform along with the motor driver. It actuates the M8 screw to adjust the slope angle.
+
+    \item Load Cells : Positioned under the bottom platform and integrated into the sole, these detect when the foot is on the ground.
+
+    \item IMU : Installed on the top platform, the IMU measures the angle at the foot level.
+
+    \item Limit Switches : Embedded on the bottom platform to stop the motor if the slider reaches its maximum or minimum position.
+
+    \item Arduino : Located on the bottom platform. Computational unit of the system.
+\end{itemize}
+
+% \textbf{Electronic components placement :} The DC motor is used to actuate the M8 screw. Thus, it is placed on the bottom plateform, together with the motor driver. The load cells are used to detect when the foot is on the ground, and are therefore placed under the bottom platform, integrated in the sole. The IMU is placed on the top plateform to measure the angle at the foot level. The limit switches are integrated on the bottom plateform to stop the motor if the slider reaches its maximum or minimum linear position. Finally, the arduino is integrated in the bottom plateform. A schematic of the placement of the main components is shown below.
+
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\linewidth]{images/electricalPart/elecSensorPlacement.png}
+    \caption{\centering Sensors and Motor placement}
+    \label{fig:Electronic_placement}
+\end{figure}
+
+% \FloatBarrier
+\noindent \textbf{Component Descriptions}
+\bigskip
+% Now we focus on each electronic component individually. We present them, explain their role and why we chose them.
+
+% \medskip
+% \medskip
+\noindent \underline{DC Motor}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/electricalPart/motor.jpeg}
+    \caption{\centering 4.4:1 metal gearmotor 25DX63L MM HP 12V}
+    \label{fig:Electronic_placement}
+\end{figure}
+
+% \FloatBarrier
+
+\noindent \textbf{Type :} 12V 4.4:1 metal gearmotor, 2200 RPM (supplier : Polulu). 
+
+\medskip \noindent \textbf{Role :} Actuate the M8 lead screw to adjust the slope angle when the user lifts their foot. The motor is not intended to support the user's weight, only to activate the mechanism when no load is applied.
+
+\medskip \noindent \textbf{Choice :}
+The chosen motor does not support the user’s weight, avoiding the bulk and heaviness such a motor would introduce. Instead, a non-backdrivable mechanical design using an M8 lead screw is chosen. The $1.25 \;mm$ pitch of the M8 screw requires a very high-speed motor to achieve an adequate linear speed for the slider.
+
+To meet this requirement, a high-speed motor rated at $10,000 \;RPM$ is used. For added safety and compatibility, a $4.4:1$ gearbox is included. The gearbox simplifies integration due to its standard output shaft, in contrast to the motor’s specialized output shaft, which would have required additional modifications. After the gearbox, the motor’s speed is reduced to $2,200 \;RPM$.
+
+
+% We decided to choose a motor that does not support the weight of the user because such a motor would be way too bulky and heavy for our application. However, choosing a motor that cannot counter the weight of a human implies a non-backdrivable mechanical design, in our case, using an M8 lead screw. This comes at a certain price : the 1.25mm pitch of the M8 screw implies the need for a very high-speed motor to get a decent linear speed of the slider. 
+%That is why we use a very high speed motor of 10000 RPM. We also use a 4.4:1 gearbox for safety reasons, and because the gearbox output shaft is a classical output shaft, where the motor output shaft is special one and would have needed extra pieces to make it suitable to our mechanical design. After the gearbox, the speed of the motor is 2200 RPM.
+
+% \begin{itemize}
+%     \item A motor capable of supporting the user’s weight would be too bulky and heavy for this application.
+%     \item To counteract this limitation, a non-backdrivable mechanical design was implemented using an M8 lead screw.
+%     \item The 1.25 mm pitch of the M8 screw necessitates a very high-speed motor (10,000 RPM) to achieve an acceptable slider linear speed.
+%     \item A 4.4:1 gearbox reduces the speed to 2200 RPM, enhances safety, and provides a standard output shaft compatible with our mechanical design.
+% \end{itemize}
+
+
+% \medskip
+% \medskip
+
+\bigskip
+
+\noindent \underline{IMU}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/electricalPart/imu_board.jpeg}
+    \caption{\centering Adafruit 9-DOF Sensor - LSM9DS1}
+    \label{fig:IMU}
+\end{figure}
+
+% \FloatBarrier
+
+
+\noindent \textbf{Type :} Adafruit 9-DOF Accelerometer/ Magnetometer/ Gyroscope (Model LSM9DS1).
+
+\medskip \noindent \textbf{Role :} Measures the angle of the foot relative to the horizontal plane when the foot is on the ground.
+
+%Take an angle measurement when the foot is on the ground. The IMU is on the same plane as the foot, the angle measurement gives the information of how far from the horizontal plane (0°) we are.
+
+\medskip \noindent \textbf{Choice :}
+This IMU board is chosen for its ease of use, precision, and affordability compared to an absolute orientation sensor. However, since absolute orientation is required to measure the foot angle, a filter must be implemented in the code to prevent sensor drift and error accumulation. In our case, we use a \textit{Mahony filter}.
+
+%We use this IMU board because it is easy to use, precise, and cheaper than an absolute orientation sensor. The drawback is that, as we need an absolute orientation value for the foot angle, we need in integrate to our code a filter to prevent the sensor from drifting and accumulating errors. In our case, we use a Mahony filter.
+
+% \begin{itemize}
+%     \item This IMU is easy to use, precise, and cost-effective compared to an absolute orientation sensor.
+
+%     \item While the IMU does not provide absolute orientation directly, integrating a Mahony filter into the code mitigates sensor drift and error accumulation, allowing for accurate angle measurements.
+% \end{itemize}
+
+% \medskip
+% \medskip
+
+\bigskip
+
+\noindent \underline{Load Cells}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/electricalPart/load_cell.jpeg}
+    \caption{\centering 50 kgs Load Cell}
+    \label{fig:IMU}
+\end{figure}
+
+% \FloatBarrier
+
+
+
+\noindent \textbf{Type :} $50\;kg$ Load Cells.
+
+\medskip \noindent \textbf{Role :} Detect whether the foot is on the ground by measuring force and using a threshold value.
+
+\medskip \noindent \textbf{Choice :} 
+Load cells are used in the design because they can withstand high loads without breaking and are easy to integrate into the mechanism. Their primary function is similar to a button, providing binary information—indicating whether the foot is on the ground or in the air. However, load cells offer greater robustness and additional data for potential future improvements compared to buttons.
+
+With the \textit{HX711} load cell amplifier, four load cells can be used instead of two, enhancing stability. This requires mounting them in a Wheatstone bridge configuration and placing them symmetrically under the sole. A schematic of the load cell electronic circuit and the Wheatstone bridge configuration is shown in Fig. \ref{fig:wheatstone bridge}.
+
+%We use load cells because these sensors can support high loads without breaking, and they are easy to integrate to the mechanism. In our design, their role is similar to the role of a button (they return a binary information : foot is on the ground, or foot is in the air). However, they are better suited because they are more robust and they provide useful information for potential improvements. With the HX711 load cell amplifier that we use, we can also use 4 load cells instead of 2 for more stability. This is on condition on mouting them in a Wheatstone bridge configuration, and placing them in a symmetric way under the sole. A schematic of the load cell electronic circuit and the Wheatstone bridge configuration is shown in Figure \ref{fig:wheatstone bridge}.
+
+% \begin{itemize}
+%     \item Load cells are robust, capable of withstanding high loads, and easy to integrate into the mechanism.
+
+%     \item Their role is binary—indicating whether the foot is on the ground or in the air—similar to a button but with added durability and potential for further functionality.
+
+%     \item Paired with the HX711 load cell amplifier, up to four load cells can be used in a Wheatstone bridge configuration for enhanced stability.
+
+%     \item For the prototype, load cells were replaced with standard buttons (Normally Closed mode) using a pull-up resistor due to a defective load cell. ( Fig.\ref{fig:wheatstone bridge})
+% \end{itemize}
+
+
+% \noindent Note : For our prototype, we replaced the load cells by classical buttons in Normally Closed mode, with a pull up resistor.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\linewidth]{images/electricalPart/loadCellConfig.png}
+    \caption{\centering Load cell schematic and Wheatstone bridge configuration}
+    \label{fig:wheatstone bridge}
+\end{figure}
+
+\FloatBarrier
+
+% \medskip
+% \medskip
+
+\bigskip
+
+\noindent \underline{Limit Switches}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/electricalPart/limit_switch.png}
+    \caption{\centering Limit Switch Board}
+    \label{fig:IMU}
+\end{figure}
+
+\FloatBarrier
+
+\noindent \textbf{Type :} Standard Limit Switch.
+
+\medskip \noindent \textbf{Role :} Ensure safety by shutting down the motor when the slider reaches the limits of its operating range, preventing damage to the motor or mechanism.
+
+%The limit switches are there for safety reasons. They are placed at the limits of the slider's acceptable range (range for which the mechanism can operate safely). When a limit switch is reached, the motor shuts down to avoid damage on the motor or on the mechanism. 
+
+\medskip \noindent \textbf{Choice :} Any limit switch that fits the dimensions of the device is suitable.
+
+% \medskip
+% \medskip
+
+\bigskip
+
+\noindent \underline{Arduino Uno R3}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/electricalPart/arduino_board.jpeg}
+    \caption{\centering Arduino Uno R3}
+    \label{fig:IMU}
+\end{figure}
+
+% \FloatBarrier
+
+\noindent \textbf{Type :} Arduino Uno R3.
+
+\medskip \noindent \textbf{Role :} Serves as the computational unit for the device, controlling all electronic components.
+
+\medskip \noindent \textbf{Choice :} Selected for its speed, cost-effectiveness, and lightweight design, which meet the requirements of this application.
+
+\subsection{Control and Working Principle}
+
+This section explains the working principle and control scheme of our device. Key variables used throughout this section are defined as follows :
+
+\begin{itemize}
+    \item Foot Angle : The angle at the foot level, measured when the user last placed their foot on the ground.
+
+    \item Device Angle : The angle between the top and bottom platforms of the mechanism, ranging from $3\degree$ to $35\degree$.
+
+    \item Slope Angle : The angle of the slope the user is stepping on.
+
+    \item Slider Position : The linear position of the slider, ranging from $0 \;cm$ to $11 \;cm$.
+
+    \item Device State : Defined by a specific slider position and device angle. For example, a slider position of $0\;cm$ corresponds to a device angle of $35\degree$, while a slider position of $11\;cm$ corresponds to a device angle of $3\degree$ (see Fig. \ref{fig:Devicestate}).
+\end{itemize}
+%%%%
+% In this section, we present and explain the working principle of our device, and the way it is controlled. For the sake of clarity, we define here a few variables often cited in this section: 
+% % \medskip
+% \noindent\textit{Foot angle:} The angle at the foot level, measured the last time the user placed their foot on the ground.
+% % \medskip
+% \noindent\textit{Device angle:} The angle between the top and bottom platforms of our mechanism, ranging from 3° to 35°.
+% % \medskip
+% \noindent\textit{Slope angle:} The angle of the slope the user is stepping on.
+% % \medskip
+% \noindent\textit{Slider position:} The linear position of the slider, which ranges from 0 to 11.
+% % \medskip
+% \noindent\textit{Device state} : The state of the device, defined by a specific slider position and device angle. A slider position of 0 corresponds to a device angle of 35°, while a slider position of 11 corresponds to a device angle of 3°. An example of a device state is shown in Figure \ref{fig:Devicestate}.
+%%%%
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8\linewidth]{images/electricalPart/device_state.png}
+\caption{Example of a certain device state}
+\label{fig:Devicestate}
+\end{figure}
+
+With these terms defined, we now describe how the device operates. The overall control scheme is shown in the next figure (Fig. \ref{Control scheme}).
+%%%%
+% Now that we introduced the terminology, we can dig into the explanation of how the Stepinator works. The overall control scheme of our device is presented in Figure \ref{Control scheme}. 
+% \medskip
+%%%%
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\linewidth]{images/electricalPart/controlLoop.png}
+\caption{Control scheme}
+\label{Control scheme}
+\end{figure}
+
+
+\noindent \textbf{Algorithm Overview}
+% \medskip
+
+\noindent The control algorithm consists of two main steps :
+
+\begin{enumerate}
+    \item Measurement Step : When the user places their foot on the ground, load cells detect the contact, and the IMU measures the foot angle. In Figure \ref{Control scheme}, this step includes the “Load Cells” and “IMU” blocks.
+
+    \item Correction Step : When the user lifts their foot, the motor is activated and adjusts the mechanism based on the IMU’s measured angle, aligning the foot to $0\degree$. This step begins with the \textit{“Mathematical Functions”} block in Figure \ref{Control scheme}.
+\end{enumerate}
+
+These steps are repeated continuously to maintain a horizontal foot position. Notably, corrections are applied only during the user’s swing phase, as the motor cannot operate under the user’s weight. Adjustments are thus effective for the next step.
+
+%%%%
+% To understand this control scheme, we first need to understand what are the main steps of our algorithm. 
+% \medskip\noindent Our algortihm is divided into 2 main steps : 
+% \medskip
+% \noindent\textbf{Measurement step :} When the user places their foot on the ground, the load cells detect the contact. The IMU then measures the foot angle. In Figure \ref{Control scheme}, the measurement step includes the load cells block and the IMU block.
+% \medskip
+% \noindent\textbf{Correction step :} When the user lifts their foot, the motor activates to adjust the mechanism, based on the angle measured by the IMU. The aim is to align the foot to 0°. In Figure \ref{Control scheme}, the correction step starts from the mathematical functions block.
+% \medskip
+% We repeat these two steps continuously to ensure the foot is maintained or adjusted to stay on a horizontal plane at all times. It is important to note that the angle is always corrected for the next step. This is because the motor cannot support the user’s weight and, therefore, cannot activate while the foot is on the ground. The motor only operates when the foot is in the air, making the adjustment effective for the next step.
+%%%%
+
+\medskip
+\noindent \textbf{Correction Step : Adjusting the Slope}
+% \medskip
+
+During the correction step, the device angle is increased by the foot angle measured in the previous step. For example, if the IMU detects a $5\degree$ foot angle, increasing the device angle by $5\degree$ restores the foot to a horizontal position.
+
+However, the linear displacement of the slider required for this adjustment depends on its initial position (or device angle). Accurate corrections therefore require knowledge of both the device state and foot angle.
+
+%%%%
+% \noindent\textbf{Correcting the slope after measurement step}
+% \medskip
+% To correct the mechanism during the correction step, we simply increase the device angle by the same amount as the angle previously measured by the IMU (the foot angle). For instance, if the IMU measures an angle of 5°, increasing the device angle by 5° will return the foot to a horizontal plane.
+% \medskip
+% However, the linear displacement of the slider required to achieve a 5° change in the device angle depends on the slider's initial position (or, equivalently, the initial device angle). Therefore, to perform the correction step accurately, both the device state and the foot angle are necessary to properly adjust the mechanism.
+%%%%
+
+\medskip
+\noindent\textbf{Determining the Foot Angle and Device State}
+% \medskip
+
+The Foot Angle is directly measured by the IMU. However, the Device State is derived from the slider position, which is tracked by the motor’s encoder. Since the IMU measures the combined effect of the device and slope angles, additional processing is required to isolate the device state.
+
+%%%%
+% The foot angle is directly provided by the IMU measurement. However, the device state cannot be derived solely from the IMU measurement because the measured angle combines both the device angle and the slope angle. Instead, we use the encoder to continuously track the slider position. From the slider position, we derive the device angle, which allows us to determine the complete device state.
+%%%%
+
+\medskip
+\noindent\textbf{Encoder and Device State Mapping}%Deriving the device state from the encoder value}
+% \medskip
+
+The motor is equipped with a $48 \;CPR$ (Counts Per Revolution) quadrature encoder, which, with the $4.4:1$ gearbox, results in :
+\[
+4.4 \times 48 = 211.2 \;CPR
+\]
+at the gearbox output. 
+
+The M8 lead screw’s $1.25 \;mm$ pitch translates $211.2$ encoder counts into a $1.25 \;mm$ slider linear displacement.
+
+For simplicity, the slider position in our device is expressed in centimeters, where :
+
+\noindent - Slider position of $0\; cm$ corresponds to a $35\degree$ device angle.
+
+\noindent - Slider position of $11 \;cm$ corresponds to a $3\degree$ device angle (see Fig. \ref{fig:Devicestate}).
+
+Using these relationships, assuming proper encoder initialization (discussed further), where an encoder value of $0$ corresponds to a slider position of $0 \;cm$, the slider’s position can be mapped linearly from the encoder value. This mapping uses the relationship between encoder counts and slider displacement, given by the M8 lead screw’s pitch of $1.25 \;mm$ and the gearbox’s $211.2$ encoder counts per revolution :
+\[
+f(\text{encoder\_value}) = \frac{\text{encoder\_value}}{\frac{211.2}{0.125}} = \frac{\text{encoder\_value}}{1689.6} \text{(cm)}
+\]
+Using this function, the slider position is derived directly from the encoder value.
+
+To determine the complete device state, the device angle must be calculated from the slider position. This relationship is nonlinear, requiring a mapping function. Through manual measurements of various device states, we found that a third-order polynomial provides an accurate approximation. Two functions were developed : one mapping the slider position to the device angle and the other mapping the device angle to the slider position. These functions are illustrated in Figure \ref{slider device}.
+
+
+
+
+%%%%
+% The motor we use is equipped with a 48 CPR (Counts Per Revolution) quadrature encoder on its shaft. Considering the motor's 4.4:1 gearbox, this results in 4.4×48=211.24.4×48=211.2 counts per revolution at the gearbox output shaft.
+
+% \medskip
+
+% The M8 lead screw in our mechanism has a pitch of 1.25 mm, meaning that 211.2 encoder counts correspond to a linear displacement of the slider by 1.25 mm. In our application, the slider's position is measured in centimeters, where a slider position of 0 cm corresponds to the maximal device angle (35°) and a position of 11 cm corresponds to the minimal device angle (3°), as illustrated in Figure \ref{Device state}.
+
+% \medskip
+
+% Assuming proper initialization of the encoder (discussed further), where an encoder value of 0 corresponds to a slider position of 0 cm, we can define a simple function to map an encoder value to the slider's position. This function accounts for the linear relationship between the encoder counts and the slider's displacement. 
+
+\[
+% f(\text{encoder\_value}) = \frac{\text{encoder\_value}}{\frac{211.2}{0.125}} = \frac{\text{encoder\_value}}{1689.6} \text{(cm)}
+\]
+
+% \medskip
+
+% From the encoder value, we derived the slider position. To obtain the complete device state, we now need to determine the device angle from the slider position. The challenge lies in the fact that the relationship between the slider position and the device angle is nonlinear. To establish a function that maps a slider position to a device angle (and vice versa), we manually measured a series of device states. These measurements revealed that a third-order polynomial fit provides an excellent approximation of the relationship. The two resulting functions—one mapping the slider position to the device angle and the other mapping the device angle to the slider position—are shown in Figure \ref{slider device}.
+
+% \medskip
+%%%
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{images/electricalPart/slider_device_angle_relation.png}
+\caption{Relations between slider position and device angle}
+\label{slider device}
+\end{figure}
+
+\FloatBarrier
+
+\medskip
+\noindent\textbf{Encoder initialization}
+% \medskip
+
+At startup, the encoder must be initialized to ensure accurate position tracking. Two different initialization methods were considered :
+
+\noindent \underline{Flat Surface Initialization} : The device is placed on a flat surface, and the IMU measures the device angle (with the slope angle being of $0\degree$). Using the mapping functions, the slider position is derived from the device angle, allowing encoder initialization.
+
+
+\noindent \underline{Limit Switch Initialization} : At startup, the motor drives the slider to a limit switch, where the encoder is reset to the corresponding value of the slider's limit position. This method allows the device to start at any position, on any slope.
+
+\medskip
+
+In our prototype, the first method is implemented, though the second method could offer greater robustness due to its reliance on a mechanical limit.
+
+%%%
+% \medskip
+% At startup, we considered two options to correctly initialize the encoder (ensuring it has a value of 0 when the slider is at position 0). These two solutions are described below:  
+% \medskip
+% \noindent\underline{Solution 1:} The device is placed on a flat surface. At startup, the IMU measures the angle of the top platform. In this setup, the slope angle is 0°, so the angle measured by the IMU is equal to the device angle. Using the mapping functions, we derive the slider position from the device angle. From this slider position, we deduce the encoder value, and the encoder is initialized to this value.  
+% \medskip  
+% \noindent\underline{Solution 2:} The device can start at any position, on any slope. At startup, the motor activates until the slider reaches a limit switch. When the limit switch is triggered, the encoder is set to the value corresponding to the slider's limit position.  
+% \medskip  
+
+% For our prototype, we implemented the first solution. However, both solutions are viable. The second solution is likely more robust, as it incorporates a mechanical aspect (the physical limit position).
+
+% \medskip
+%%%
+
+\medskip
+\noindent\textbf{Correction Step Details}
+% \medskip
+
+%%%
+% \noindent\textbf{Correction step details}
+
+% \medskip
+%%%
+The correction step begins with the \textit{"Mathematical Functions"} block (see Fig. \ref{Control scheme}), which takes the encoder value and the previously measured foot angle as inputs. The foot angle determines the offset required to align the foot horizontally. The encoder value is used to derive the current device state, including the device angle. Therefore, from the device angle, we calculate the target device angle as :  
+\[
+\text{Target Device Angle} = \text{Current Device Angle} + \text{Foot Angle}
+\]
+With the current and target device angles known, the current slider position and the target slider position can be determined using the mapping functions. Finally, from the target slider position, the corresponding target encoder value required to achieve the correction is computed.
+
+%%%
+% Using the functions described earlier, the encoder value is used to derive the current device state, including the device angle. From the device angle, we calculate the target device angle as:  
+% \[
+% \text{Target Device Angle} = \text{Current Device Angle} + \text{Foot Angle}
+% \]
+% With both the current and target device angles known, we can determine the current slider position and the target slider position using the mapping functions. Finally, from the target slider position, we compute the corresponding target encoder value required to achieve the correction.  
+
+% \medskip
+%%%
+
+\medskip
+\noindent\textbf{PD controller}
+% \medskip
+
+The target encoder value is used as the reference input for a PD controller. The current encoder value (representing the slider's current position) is compared to the target encoder value to compute the error. 
+
+The controller adjusts the motor input, based on this error, using  proportional (\(K_p\)) and derivative (\(K_d\)) gains. The proportional term ensures the motor moves towards the target position, while the derivative term helps reduce overshooting by slowing the motion as the slider approaches the desired position. 
+
+This control strategy ensures precise and smooth adjustments the correction step. After tuning through trial and error, the values $K_p = 0.4$ and $K_d = 0.01$ are found to be good values for our controller.
+
+%%%
+% \noindent\textbf{PD controller}
+% \medskip
+% The target encoder value serves as the reference input for a PD controller. The current encoder value, which represents the actual position of the slider, is fed back and compared to the target encoder value to compute the error.  
+% \medskip
+% The PD controller then calculates the motor input based on this error using the proportional (\(K_p\)) and derivative (\(K_d\)) gains. The proportional term ensures the motor moves towards the target position, while the derivative term helps reduce overshooting by slowing the motion as the slider approaches the desired position.  
+% \medskip
+% This approach allows the motor to drive the mechanism precisely to the correct position, ensuring accurate and smooth adjustments during the correction step. 
+% \medskip
+% After tuning, we found the values \(K_p\) = 0.4 and \(K_d\) = 0.01 to be good values for our controller.
+% \medskip
+%%%
+
+% \medskip
+
+\medskip
+\noindent\textbf{Limit switches}
+% \medskip
+
+Two limit switches are placed at the slider’s $0 \;cm$ and $11 \;cm$ positions. When triggered, the motor stops, and the encoder value is reset to the corresponding position.
+
+% \noindent\textbf{Limit switches}
+% % \medskip
+% The 2 limit switches are placed at positions 0cm and 11cm of the slider. When a limit switch is reached, the motor shuts down and the encoder current value is set to the value it should have at the position of the limit switch.
+
+
+\subsection{Performances}
+
+\subsubsection{Error plots : Show that the error at the angle is low, show that the error does not accumulate much even after a long period of time, explain that if the device correction starts drifting (even though it shouldn't), it is still possible to force the slider to hit a limit switch, to reinitialize the encoder value} \textcolor{orange}{Christy}
+\subsubsection{Speed discussion : based on our application, why is our achieved speed reasonable}
+\subsubsection{Max weight discussion : same as above}
+Talk about flex and block to stop
+
+
+
+
+
+% \subsection{ Text Acronyms Inside Equations}
+% This example shows where the acronym ``MSE" is coded using $\backslash${\tt{text\{\}}} to match how it appears in the text.
+
+% \begin{equation*}
+%  \text{MSE} = \frac {1}{n}\sum _{i=1}^{n}(Y_{i} - \hat {Y_{i}})^{2}
+% \end{equation*}
+
+% \begin{verbatim}
+% \begin{equation*}
+%  \text{MSE} = \frac {1}{n}\sum _{i=1}^{n}
+% (Y_{i} - \hat {Y_{i}})^{2}
+% \end{equation*}
+% \end{verbatim}
+
+\section{Conclusion}
+
+- final conclusion toward the critiquing the found solution and the possibility for the improvement
+
+- different applications/ products of the proposed technology (the fact that we could ameliorate the sole if it could tilt on the sides as well for instance)
+
+- future impact
+
+\subsection{Risk Assessment}
+
+\subsection{Future Steps} 
+% \textcolor{violet}{Emilie \& Lucie}
+
+Future improvements could address the single degree of freedom, enabling downhill walking, perpendicular movement on slopes, and greater angle adaptability. This provides the product with significant opportunities for enhancement and innovation!
+
+
+
+
+% \section*{Acknowledgments}
+% This should be a simple paragraph before the References to thank those individuals and institutions who have supported your work on this article.
+
+% {\appendix[Proof of the Zonklar Equations]
+% Use $\backslash${\tt{appendix}} if you have a single appendix:
+% Do not use $\backslash${\tt{section}} anymore after $\backslash${\tt{appendix}}, only $\backslash${\tt{section*}}.
+% If you have multiple appendixes use $\backslash${\tt{appendices}} then use $\backslash${\tt{section}} to start each appendix.
+% You must declare a $\backslash${\tt{section}} before using any $\backslash${\tt{subsection}} or using $\backslash${\tt{label}} ($\backslash${\tt{appendices}} by itself
+%  starts a section numbered zero.)}
+
+%{\appendices
+%\section*{Proof of the First Zonklar Equation}
+%Appendix one text goes here.
+% You can choose not to have a title for an appendix if you want by leaving the argument blank
+%\section*{Proof of the Second Zonklar Equation}
+%Appendix two text goes here.}
+
+
+
+% \section{References}
+% You can use a bibliography generated by BibTeX as a .bbl file.
+%  BibTeX documentation can be easily obtained at:
+%  http://mirror.ctan.org/biblio/bibtex/contrib/doc/
+%  The IEEEtran BibTeX style support page is:
+%  http://www.michaelshell.org/tex/ieeetran/bibtex/
+ 
+
+
+\cleardoublepage
+
+\begin{thebibliography}{1}
+\bibliographystyle{IEEEtran}
+
+\bibitem{ref1}
+Scott P. Breloff, Amrita Dutta, Fei Dai, Erik W. Sinsel, Christopher M. Warren, Xiaopeng Ning, John Z. Wu, Assessing work-related risk factors for musculoskeletal knee disorders in construction roofing tasks, Applied Ergonomics, Volume 81, 2019, 102901, ISSN 0003-6870, https://doi.org/10.1016/j.apergo.2019.102901.
+
+\bibitem{ref2}
+Li-Yang Wang, Ping-Hsuan Han, and Liwei Chan. 2022. Push-Ups: Enhancing Kinesthetic Experience with Shape-Forming Devices on the Feet Soles. In Proceedings of the Sixteenth International Conference on Tangible, Embedded, and Embodied Interaction (TEI '22). Association for Computing Machinery, New York, NY, USA, Article 27, 1–8. https://doi.org/10.1145/3490149.3501333
+
+\bibitem{ref3}
+Katerina Baousi, Nate Fear, Christos Mourouzis, Ben Stokes, Henry Wood, Paul Worgan, and Anne Roudaut. 2017. Inflashoe: A Shape Changing Shoe to Control Underfoot Pressure. In Proceedings of the 2017 CHI Conference Extended Abstracts on Human Factors in Computing Systems (CHI EA '17). Association for Computing Machinery, New York, NY, USA, 2381–2387. https://doi.org/10.1145/3027063.3053190
+
+\bibitem{step}
+Human walking gait speed research : 
+https://www.sralab.org/rehabilitation-measures/gait-speed
+
+\bibitem{ref4}
+Pitch Hopper Roof Wedge: An essential tool for any roofer or crew [Online]. Available : https://www.thepitchhopper.com
+
+
+\bibitem{pololu} Pololu DC motor [Online]. Available : https://www.pololu.com/category/116/37d-metal-gearmotors
+
+\bibitem{SJ235} Material properties of the SJ235 : https://www.sidastico.com/fr/prodotto/s235jr/
+
+
+\bibitem{ref7}
+
+
+\bibitem{ref8}
+
+
+\bibitem{ref9}
+
+
+\end{thebibliography}
+
+
+
+\newpage
+
+
+
+\section{Appendix}
+
+\subsection{other Appendixes}
+
+
+\cleardoublepage
+
+
+\subsection{Gantt Chart \& Workpackages}
+
+% - clear and well organized chart
+% - realistic goals and timeline
+% - faire diviion between the members
+
+Our Gnatt chart is separated into twenty-one distinct work packages.
+
+\begin{enumerate}
+    \item \textit{Project Plan \& ideas :} Selection of the project idea and planning for the overall semester’s progress and objectives.
+
+    \item \textit{Mechanical Calculations :} Performing calculations on the mechanical aspects of the device to ensure proper functionality.
+    
+    \item \textit{Motor Choice :} Initial and secondary selection of the motor best suited for the project requirements.
+    
+    \item \textit{Sensors Choice :} Choosing the appropriate sensors needed to integrate with our product.
+    
+    \item \textit{Engineering Specifications :} Developing technical specifications to assess designs, supported by quantitative research and justification.
+
+    \item \textit{Sketches :} Creating sketches of ideas, concepts, and layouts to better illustrate the product and track progress.
+
+    \item \textit{Mechanical Design :} Producing precise mechanical designs for the overall product and its individual components.
+
+    \item \textit{Design Optimization :} Refining and improving the design based on calculations, testing, and feedback.
+
+    \item \textit{CAD \& 3D Views :} Preparing detailed 3D models for product visualization and creating a fusion model for manufacturing.
+
+    \item \textit{Other Designs :} Designing the sole attachment for the user’s shoe and the underlying sole of the product.
+    
+    \item \textit{Manufacturing :} Prototyping, 3D printing, and fabricating the various parts required for product assembly.
+
+    \item \textit{Mechanical Assembly :} Assembling the product by combining the different parts, including gears, screws, and other components.
+
+    \item \textit{Electronics \& Control :} Calibrating sensors, programming DC motor control with an H-bridge, and integrating all electronic components into the product.
+
+    \item \textit{Weekly Presentation :} Preparing the slides to present weekly updates and progress.
+
+    \item \textit{Important documents organization :} Maintaining a well-organized repository of all project documents.
+
+    \item \textit{Demo Conception :} Developing the demo scenario and gathering props required for the presentation.
+
+    \item \textit{Poster Design :} Creating an engaging poster, writing text, and selecting images to effectively communicate key information.
+
+    \item \textit{Demo Presentation :} Presenting the project during the demo day.
+
+    \item \textit{Video Production:} Filming and editing a video to showcase the functionality of the device. 
+
+    \item \textit{Final Presentation :} Delivering a technical presentation of the final design.
+
+    \item \textit{Report Writing :} Compiling a comprehensive report detailing every step of the project, from initial ideas to the final solution.
+    
+\end{enumerate}
+
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{images/Gantt_chart.png}
+\caption{Gantt chart showing the various workpackages and their timeline}
+\label{gantt}
+\end{figure}
+
+% \vfill
+
+\end{document}
+
+
