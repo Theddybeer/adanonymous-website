@@ -7,9 +7,9 @@ What a journey! Before getting off your sofa, let's have one final recap.
 For a major worldwide event like World War II, the film industry reflected the historical shift through a change in genre dominance, for example with the rise of war films. The content of movies also evolved, with an increase in darker themes in the plot summary, often featuring signs violence even after the war period. Additionally, there was a notable impact on the representation of Jewish characters in film.
 For a less global (but still significant) event like 9/11, the impact on the film industry was less pronounced but still noticeable. This event led to a shift in genre trends and a change in the usage of the word "plane" in movies.
 
-Let’s investigate other events using the same methodology. These events can be analyzed further, but we will only get a glimpse of their impact. 
+Let’s investigate other events using the same methodology. These events can be analyzed further, but you will only get a glimpse of their impact. 
 
- If we focus on the science fiction horror genre (mainly about alien invasion), we can observe a distinct trend in North America, where the production of such films increased starting around 1952. This trend was not as prominent in Europe or Asia. In the U.S., alien invasion narratives often symbolized the fear of communism, with many of these films reflecting anti-communist and Soviet menace. You can read more about this [here](https://cinemahistoryonline.com/2020/02/11/communist-subversion-in-alien-films-of-the-1950s-invaders-from-mars/).
+ If you focus on the science fiction horror genre (mainly about alien invasion), you can observe a distinct trend in North America, where the production of such films increased starting around 1952. This trend was not as prominent in Europe or Asia. In the U.S., alien invasion narratives often symbolized the fear of communism, with many of these films reflecting anti-communist and Soviet menace. You can read more about this [here](https://cinemahistoryonline.com/2020/02/11/communist-subversion-in-alien-films-of-the-1950s-invaders-from-mars/).
 
 
 ![scifi](/assets/figures/Conclusion/Scifi.jpg){: .mx-auto.d-block :}
