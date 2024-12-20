@@ -11,10 +11,31 @@ subtitle: How did it impact the movie industry ?
 
 # Genre Analysis 
 
+<div class="container1">
+  <div class="image">
+    <img src="/assets/img/casablanca.jpg" alt="Casablanca">
+  </div>
+  <div class="text">
+    <p>Imagine you’re relaxing on your sofa, ready to watch an old movie from the 1940s. Out of curiosity, you type "best movie 1942" into Google — the year of your grandfather's birth. To your surprise, the top three highest-rated films from that year, according to  <a href="https://www.imdb.com/list/ls023869890/?year=1942%2C1942&sort=user_rating%2Cdesc">IMDb</a>, are about crime and death. </p>
+  </div>
+</div>
 
 Imagine you’re relaxing on your sofa, ready to watch an old movie from the 1940s. Out of curiosity, you type "best movie 1942" into Google — the year of your grandfather's birth. To your surprise, the top three highest-rated films from that year, according to [IMDb](https://www.imdb.com/list/ls023869890/?year=1942%2C1942&sort=user_rating%2Cdesc ), are about crime and death.
 
 This sparks your interest: could it be a coincidence, or was there a broader trend in movie genres at that time?
+<style>
+.container1 {
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+  }
+
+  img {
+    max-width: 100%;
+    max-height:100%;
+  }
+</style>
 
 
 {% include_relative assets/figures/WW2/Movies/movie_genre_us_ww2_12_00_01.html %} 
@@ -26,8 +47,8 @@ You want to understand this trend a bit more, so you decide to focus on the "war
 
 {% include_relative assets/figures/WW2/Movies/War_film.html %} 
 
-In 1943, war films represented more than 11% of films in Europe — a percentage that had doubled compared to 1941. A similar doubling occurred in the United States, while Asia experienced a significant increase as well. By 1946, the percentage of war films in all three continents had nearly returned to its original level.
-Looking further back, an earlier peak is noticeable in Asia in 1938 and 1939, which is not observed in Europe or the United States. Intrigued by this anomaly, you consult a history book and discover a possible explanation: the Second Sino-Japanese War, which began in 1937 and ended in 1945. The start of this conflict may have induced the initial surge in war films in Asia.
+In 1943, war films represented more than 11% of films in Europe — a percentage that had doubled compared to 1941. A similar doubling occurred in the North America, while Asia experienced a significant increase as well. By 1946, the percentage of war films in all three continents had nearly returned to its original level.
+Looking further back, an earlier peak is noticeable in Asia in 1938 and 1939, which is not observed in Europe or North America. Intrigued by this anomaly, you consult a history book and discover a possible explanation: the Second Sino-Japanese War, which began in 1937 and ended in 1945. The start of this conflict may have induced the initial surge in war films in Asia.
 
 You return to your sofa to start watching the movie “Casablanca”, which has an IMDb rating of 8.5 and is about the war. As you watch, you notice that the film serves as propaganda against the Nazis.
 It's time for a movie break with some fun data analysis. This time, you focus on the propaganda movie genre. 
@@ -64,7 +85,7 @@ By analyzing the words associated with these negative characters in the three di
   </div>
 
   <div id="content3" class="content" style="display:none;">
-    <h2>During After 3</h2>
+    <h2>During After</h2>
     <img src="{{ '/assets/figures/WW2/NLP/NLP_during_after.png'| relative_url }}" alt="Image 3">
     <p>You then examine the comparison between the period during the war and after the war. Bing again ! You find a lot of words related to world war II, but now there is also the topic of resistance : Hitler, nazi, resistance, guerilla, Reich, France, Vichy, Germans, Führer, Mussolini...</p>
     
@@ -173,8 +194,8 @@ What is the impact on German character ? In Europe, we observe a big rise in Ger
 
 <div class="redirect-buttons">
   <button class="redirect-button" onclick="window.location.href='{{ '/9_11' | relative_url }}'">Go to 9/11 Analysis</button>
-  <button class="redirect-button" onclick="window.location.href='{{ '/' | relative_url }}'">Go to menu</button>
-  <button class="redirect-button" onclick="window.location.href='{{ '/conclusion' | relative_url }}'">Go to Conclusion</button>
+  <button class="redirect-button" onclick="window.location.href='{{ '/' | relative_url }}'">Go to introduction</button>
+  <button class="redirect-button" onclick="window.location.href='{{ '/conclusion' | relative_url }}'">Go to conclusion</button>
 </div>
 
 <style>
